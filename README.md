@@ -78,13 +78,13 @@ A person who is 1) aged 24–64, 2) currently at work, 3) working between 20 and
 
 The `person_id` variable uniquely identifies each person by combining the ACS year, household serial number, and person number within that household (e.g., `2019_342924_1`).
 
-***type_hrwk*** 
+***type_hrwrk*** 
 
-The `type_hrwk` variable categorizes hours worked per week into `part_time` (20–34 hours/week), `full_time` (35–40 hours/week), or `over_time` (more than 40 hours/week).
+The `type_hrwrk` variable categorizes hours worked per week into `part_time` (20–34 hours/week), `full_time` (35–40 hours/week), or `over_time` (more than 40 hours/week).
 
-***wft***
+***wfh***
 
-The `wft` variable identifies whether the work is remote (`TRUE`).
+The `wfh` variable identifies whether the work is remote.
 
 
 ***transit_group***
@@ -118,7 +118,7 @@ The `n_workers` and `family_workers` variables both identify the number of famil
 
 ***roommate_workers (mixed household)***
 
-The `roommate_workers` variable identify the number of stabling working roommates in a mixed household.
+The `roommate_workers` variable identifies the number of stable working roommates in a mixed household.
 
 
 ***num_dependent_children (family & mixed household)***
@@ -158,7 +158,7 @@ The `range_burden` variable categorizes the percentage of `rent_burden` into `af
 
 ***income_tier***
 
-The `range_burden` variable categorizes rent_burden percentages into four tiers: affordable (30% or less), burdened (30% to 50%), severely_burdened (50% to 70%), and extreme (over 70% but under 100%).
+The `income_tier` variable categorizes income into `low_income` (bottom 30th percentile), `middle_income` (30th–80th percentile), and `upper_income` (80th–100th percentile), based on quantiles calculated separately by survey year within each household category. Individual-level groups use individual income, while household-level groups use household income.
 
 
 ### Analytical Framework & Groupings
@@ -167,14 +167,14 @@ To facilitate exploratory data analysis (EDA) and modeling, the four original ho
 
 **Group_One**
 
-Group One represents an individual-level analysis focusing on nonfamily living arrangements. This group combines individuals from single renter households, roommate renter households, and roommates living in mixed renter households. Following the data-cleaning and merging process, Group One retains a sample of 32,604 observations for descriptive and predictive analysis.
+Group One represents an individual-level analysis focusing on nonfamily living arrangements. This group combines individuals from single renter households, roommate renter households, and roommates living in mixed renter households. Following the data wrangling and merging process, Group One retains a sample of 32,604 observations for descriptive and predictive analysis.
 
 
 **Group_Two**
 
-Group Two represents a household-level analysis focusing on family living arrangements. This group combines individuals from family renter households and families living in mixed renter households. Following the data-cleaning and merging process, Group Two retains a sample of 87,901 observations for descriptive and predictive analysis.
+Group Two represents a household-level analysis focusing on family living arrangements. This group combines individuals from family renter households and families living in mixed renter households. Following the data wrangling and merging process, Group Two retains a sample of 87,901 observations for descriptive and predictive analysis.
 
 
 **Group_Three**
 
-Group Three is an additional group focusing exclusively on work-from-home (WFH) individuals across all households. Following the data-cleaning and merging process, Group Three retains a sample of 13,979 observations for descriptive analysis.
+Group Three is an additional group focusing exclusively on work-from-home (WFH) individuals across all households. Following the data wrangling and merging process, Group Three retains a sample of 13,979 observations for descriptive analysis.
