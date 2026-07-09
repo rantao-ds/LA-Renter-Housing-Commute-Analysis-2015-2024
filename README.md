@@ -178,3 +178,44 @@ Group Two represents a household-level analysis focusing on family living arrang
 **Group_Three**
 
 Group Three is an additional group focusing exclusively on work-from-home (WFH) individuals across all households. Following the data wrangling and merging process, Group Three retains a sample of 13,979 observations for descriptive analysis.
+
+
+
+## Exploratory Data Analysis (EDA)
+The primary goal of the EDA is to understand how different analytical groups handle this trade-off by comparing rent burden and commute time across different household structures within the same analytical group.
+
+### At a Glance
+
+<img width="1000" alt="overall_prop_type_household" src="https://github.com/user-attachments/assets/83b897ad-87dd-4faa-840d-3121c48685a4" />
+
+Overall, family households are the most common renter household type in Los Angeles County, representing 69.7% of all renter households. In contrast, mixed households, another family-based household structure, represent only 3%, indicating that the majority of family-based households do not often take on an additional roommate to share the space. When it comes to living with a roommate versus living alone, more renters choose to live alone in a single household (18.8%) than with a roommate (8.4%). This overall distribution suggests that renters in Los Angeles County tend to prioritize privacy.
+
+<img width="1000" alt="housing_burden_dashboard" src="https://github.com/user-attachments/assets/fd3b9f90-16d0-4c68-b497-f629d2eeccb1" />
+
+
+Overall, the majority of renters in Los Angeles County meet the gold standard of the 30% rent burden rule (65.4%), and almost a quarter of renters (23.8%) have a rent burden between 30% and 50%. This indicates that 89.2% of renters in Los Angeles County have a rent burden of less than 50%. Meanwhile, 7.5% of renters are severely burdened and 3.2% face extreme rent burden, suggesting that these groups are still struggling financially. 
+
+Out of all the household groups in Los Angeles County, single households carry the highest rent burden, with only 53.6% of renters considered affordable. The remaining household groups manage rent burden more comfortably, especially mixed households, where 82.3% of renters are considered affordable. In terms of renters experiencing over 50% rent burden, mixed and roommate households are less likely to face financial difficulties, at 4% and 5.5%, respectively. For family and single households, the non-sharing households, a sizable portion of renters are likely to face this burden, at 10.3% and 15.7%, respectively. This pattern suggests a "privacy tax" on rent burden, where renters who prioritize privacy over shared living tend to pay for it through higher financial strain.
+
+
+<img width="1000" alt="boxplot_rent_by_household_perweigth" src="https://github.com/user-attachments/assets/75a9fe32-8617-4def-a4d6-c605d7750c34" />
+
+The boxplot shows that non-sharing households have rent distributions that are less spread out and more stable compared to space-sharing households. While single and family households have similar medians and rent distributions (box sizes), the main difference is in the outliers: single household outliers stay between $4,000 and $5,000, while family household outliers extend beyond $5,000.
+
+Roommate-only households show the most instability and spread in rent distribution, with the highest median rent (around $2,150) and upper whisker ($4,500). Their outliers especially reach beyond the graph's $5,000 limit. Even though mixed households have a similar box size and spread, their median rent and upper whisker are comparatively lower. Their outliers are sparse but still extend beyond the $5,000 limit.
+
+
+<img width="1000" alt="transit_performance_dashboard" src="https://github.com/user-attachments/assets/7a218b57-c7f2-45a7-87e2-cd732d12ba5e" />
+
+Unsurprisingly, the majority of renters commute by private auto (77.2%), and more than 70% of renters commute by private auto across all household groups. Notably, a sizable share of renters work from home (11.7%), while very small portions commute by public transit or active transit, at 5.9% and 3.7% respectively. Overall, this commute pattern is highly consistent with LA's car-oriented urban landscape.
+
+
+<img width="1000"  alt="transit_hh_performance_dashboard" src="https://github.com/user-attachments/assets/5a9e9403-4679-4530-9ba5-08d09a4f54c7" />
+
+Overall, the average commute time stays around 30 minutes across all household groups, ranging from 29.5 to 31.3 minutes. However, rent burden varies across different household groups: single households have the highest mean rent burden (33.3%), followed by family households (28.2%), roommate households (24.1%), and mixed households (21%). This suggests that renters generally expect and manage a commute of around 30 minutes regardless of household type, while rent burden still varies by household structure, reinforcing the "privacy tax" pattern seen earlier.
+
+The trade-off by transit mode looks completely different from the trade-off by household type. While mean rent burden stays around 30% across all transit modes, public transit renters have the highest average rent burden and commute time, at 31.4% and 49.6 minutes, respectively. This clearly indicates that public transit renters are less able to manage this trade-off. By contrast, active transit renters average 30.4% rent burden with the shortest mean commute time of 16 minutes, suggesting they prioritize proximity, likely choosing to live close to work. Private auto and other transit renters manage the trade-off well, with rent burden and commute time both staying around 30% and 30 minutes, respectively.
+
+
+
+### Group One (nonfamily)
