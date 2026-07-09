@@ -186,7 +186,7 @@ The primary goal of the EDA is to understand how different analytical groups han
 
 ### At a Glance
 
-<img width="1000" alt="overall_prop_type_household" src="https://github.com/user-attachments/assets/83b897ad-87dd-4faa-840d-3121c48685a4" />
+<img width="800" alt="overall_prop_type_household" src="https://github.com/user-attachments/assets/83b897ad-87dd-4faa-840d-3121c48685a4" />
 
 Overall, family households are the most common renter household type in Los Angeles County, representing 69.7% of all renter households. In contrast, mixed households, another family-based household structure, represent only 3%, indicating that the majority of family-based households do not often take on an additional roommate to share the space. When it comes to living with a roommate versus living alone, more renters choose to live alone in a single household (18.8%) than with a roommate (8.4%). This overall distribution suggests that renters in Los Angeles County tend to prioritize privacy.
 
@@ -205,7 +205,7 @@ The boxplot shows that non-sharing households have rent distributions that are l
 Roommate-only households show the most instability and spread in rent distribution, with the highest median rent (around $2,150) and upper whisker ($4,500). Their outliers especially reach beyond the graph's $5,000 limit. Even though mixed households have a similar box size and spread, their median rent and upper whisker are comparatively lower. Their outliers are sparse but still extend beyond the $5,000 limit.
 
 
-<img width="1000" alt="transit_performance_dashboard" src="https://github.com/user-attachments/assets/7a218b57-c7f2-45a7-87e2-cd732d12ba5e" />
+<img width="1200" alt="transit_performance_dashboard" src="https://github.com/user-attachments/assets/7a218b57-c7f2-45a7-87e2-cd732d12ba5e" />
 
 Unsurprisingly, the majority of renters commute by private auto (77.2%), and more than 70% of renters commute by private auto across all household groups. Notably, a sizable share of renters work from home (11.7%), while very small portions commute by public transit or active transit, at 5.9% and 3.7% respectively. Overall, this commute pattern is highly consistent with LA's car-oriented urban landscape.
 
@@ -219,3 +219,39 @@ The trade-off by transit mode looks completely different from the trade-off by h
 
 
 ### Group One (nonfamily)
+
+<img width="1000" alt="independent_share_pie" src="https://github.com/user-attachments/assets/59b0ad49-ee0f-4186-9b6e-221beba20ddc" />
+
+
+
+<img width="1000" alt="nonfamily_housing_dashboard" src="https://github.com/user-attachments/assets/e7868352-cac3-4d4b-9d67-535945928cbe" />
+
+
+
+<img width="1000" alt="rent_burden_socioeconomic_profiles" src="https://github.com/user-attachments/assets/98c7f329-0f0c-43a9-bcb5-6b9e9ae8e3ec" />
+
+
+
+<img width="1000" alt="rent_burden_racial_ethnic_profile" src="https://github.com/user-attachments/assets/7072c7e5-5afd-4fb1-a003-dba3f01517d8" />
+
+
+
+<img width="1000" alt="transit_performance_dashboard" src="https://github.com/user-attachments/assets/53143cb1-dfec-43ab-970c-b03348543d86" />
+
+
+
+<img width="1000" alt="transit_mode_income_profile_high_contrast_green" src="https://github.com/user-attachments/assets/11c4c7c2-58ec-45f7-9588-fefd5bfd8ff7" />
+
+
+
+
+<img width="1000" alt="nonfamily_transit_hh_performance_dashboard" src="https://github.com/user-attachments/assets/e51d9e6a-1ce8-4390-867b-ebab2ae8c4b3" />
+
+
+
+
+<img width="1000" alt="carpool_rent_burden_by_hh" src="https://github.com/user-attachments/assets/5a0168c5-11d7-4e32-8b3a-11bd6ccb6109" />
+
+
+
+
