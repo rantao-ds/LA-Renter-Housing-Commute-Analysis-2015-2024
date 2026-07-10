@@ -267,26 +267,70 @@ Another interesting lens to look at the non-family group is carpool status, as c
 
 <img width="1000" alt="family_housing_dashboard" src="https://github.com/user-attachments/assets/56274dd9-07fe-4de4-9fd7-4005bdc69a8c" />
 
+Overall, the majority of group two renters come from family households (97.7%), and very few come from mixed households (2.3%). The "privacy tax" also applies to group two, where mixed households have a comparatively higher proportion in the affordable category. Across the more burdened categories (burdened, severely burdened, and extreme), family households have a slightly higher proportion.
 
 <img width="1000" alt="family_rent_burden_socioeconomic_profiles" src="https://github.com/user-attachments/assets/46883e5d-9809-41b1-a18e-20e083b47139" />
+
+In group two, renters near retirement (55–64) stay fairly stable across all categories, ranging narrowly from 11.9% to 13.4%. For rent burden under 50% (affordable and burdened), young professionals (24–34) have a slightly higher proportion than mid- and late-career professionals (35–44 and 45–54). For rent burden over 50% (severely burdened and extreme), the proportion of young professionals decreases while mid- and late-career professionals increase, with young and mid-career professionals ending up with a similar share in the more burdened categories. 
+
+In terms of income tier, the low-income group shows a very significant shift across the four rent burden categories. In the affordable category, low-income renters represent only 10.1%, then increase to 62.1% in the burdened category. In both severely burdened and extreme categories, low-income renters dominate, at 92.7% and 99.1% respectively. In contrast, almost all upper-income renters fall under the affordable category and drop to nearly zero in the more burdened categories. Meanwhile, middle-income renters also significantly decline at high burden levels, dropping to just 7.3% in the severely burdened category and to nearly zero in extreme.
 
 
 <img width="1000" alt="family_rent_burden_racial_ethnic_profile" src="https://github.com/user-attachments/assets/c758ac4f-5e53-4766-80c8-485eaa915968" />
 
 
+Overall, more than half of renters are Hispanic/Latino across all rent burden categories, with a slight increase in proportion as burden grows, from 51.3% at affordable to 60.7% at extreme. In contrast, White (Non-Hispanic) renters make up a sizeable share but decrease as burden increases, from 24.3% at affordable to 16.2% at extreme. Black/African American, Asian, and Other/Multi-racial renters represent comparatively smaller proportions and stay fairly stable across the four rent burden categories.
+
+
+
+<img width="1000" alt="family_mixed_worker_profile_dashboard" src="https://github.com/user-attachments/assets/d62870ba-48aa-4e25-b068-bfd44eb22c7c" />
+
+In family-based households, the number of stable workers in a family may impact rent burden, especially for families with children under the age of 18. 
+
+Overall, multiple earners without children have the least rent burden, sharing the largest proportion of the affordable category in both family (54.1%) and mixed (71.8%) households, with that share decreasing as burden level increases. 
+
+In contrast, single earners with children have the highest rent burden, and this share significantly increases as burden level grows. It is interesting to note that the shares for less than 50% rent burden are pretty similar for both family and mixed households, while mixed households have a higher share for over 50% rent burden, indicating that mixed households with a single earner and children are more likely to face financial difficulties than family households.
+
+For multiple earners with children, family and mixed households show a completely different pattern. In family households, the share slightly decreases as rent burden increases. In mixed households, however, a sizable proportion centers on burdened (18.5%) and severely burdened (15.6%), with comparatively smaller shares in affordable and extreme categories.
+
+Similarly, for single earners without children, the share in family households increases as rent burden increases, while in mixed households, a sizable share falls under burdened (20.2%) and extreme (22%) categories, with comparatively smaller shares in affordable and severely burdened categories.
+
+This indicates that single earners face tremendous financial difficulties, especially those with children, and this burden is even more pronounced in mixed households than in family households. This pattern, indeed, goes against what the "privacy tax" would predict: adding a roommate to a mixed household should help relieve the burden, but the data shows the opposite, with mixed households still facing worse outcomes than family households.
+
+
 <img width="1000" alt="family_transit_mode_income_profile" src="https://github.com/user-attachments/assets/5366edf7-bb7c-4008-a911-07e4ce2187a2" />
+
+
+
+
+
+
+
+
 
 
 <img width="1000" alt="family_transit_performance_dashboard" src="https://github.com/user-attachments/assets/9d7450c5-b773-4055-825e-0c54840814ad" />
 
 
+
+
+
 <img width="1000" alt="family_transit_performance_dashboard copy" src="https://github.com/user-attachments/assets/e3d96930-d076-41b2-9183-e8940b934ca2" />
+
+
+
 
 
 <img width="1000" alt="family_mixed_tradeoff_dashboard_wk_child" src="https://github.com/user-attachments/assets/630d3074-ab12-4c62-86a4-c460d28238cf" />
 
 
-<img width="1000" alt="family_mixed_worker_profile_dashboard" src="https://github.com/user-attachments/assets/d62870ba-48aa-4e25-b068-bfd44eb22c7c" />
+
+
+
+
+
+
+
 
 
 ### Group Three (WFH)
