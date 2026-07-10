@@ -232,31 +232,74 @@ In group one, 87.9% of renters have less than 50% rent burden. Among all househo
 
 <img width="1000" alt="rent_burden_socioeconomic_profiles" src="https://github.com/user-attachments/assets/98c7f329-0f0c-43a9-bcb5-6b9e9ae8e3ec" />
 
-All age groups share a similar proportion across the range of rent burden in group one: about 12–13% from ages 55–64, about 16% from ages 45–54, roughly 22–25% from ages 35–44, and approximately 45–50% from ages 24–34.
+All age groups share a similar proportion across the range of rent burden in group one: about 12%–13% from ages 55–64, about 16% from ages 45–54, roughly 22%–25% from ages 35–44, and approximately 45–50% from ages 24–34.
 
 However, the income tier reflects the true financial difficulties for those with low income. At the affordable level, more than 80% of renters come from upper- and middle-income groups, and only 14.5% are low-income. At the burdened level, middle- and upper-income renters still occupy about half, while the low-income group rises to 43.2%. At both the severely burdened and extreme levels, the upper-income group drops to near zero, and low-income renters expand from 78.2% to 94.5%.
 
 
 <img width="1000" alt="rent_burden_racial_ethnic_profile" src="https://github.com/user-attachments/assets/7072c7e5-5afd-4fb1-a003-dba3f01517d8" />
 
+Similar to age group, racial and ethnic groups also share a similar proportion across the range of rent burden in group one: about 39.1–42.5% Non-Hispanic White, approximately 26.6–28.9% Hispanic/Latino, roughly 10.8–14.9% Black/African American, about 10.9–15.3% Asian, roughly 4.5–5.3% Other/Multi-racial, and Native American renters at near zero across all rent burden levels.
 
 
 <img width="1500" alt="transit_performance_dashboard" src="https://github.com/user-attachments/assets/53143cb1-dfec-43ab-970c-b03348543d86" />
 
 
+In group one, the overall transit distribution is pretty similar across all household types: the majority of renters commute by private auto at 72.2%, a sizable portion work from home at 15.2%, and very few commute by public transit, active transit, or other transit methods. This pattern is consistent across all household groups. However, it is interesting to note that roommate renters living in mixed households are less likely to work from home compared with other household groups.
+
 
 <img width="1000" alt="transit_mode_income_profile_high_contrast_green" src="https://github.com/user-attachments/assets/11c4c7c2-58ec-45f7-9588-fefd5bfd8ff7" />
 
-
+In group one, renters using active and other transit have a very similar share across all income tiers. However, the low-income group is more likely to use public transit (57%) compared with private auto (29.9%) and work from home (18.9%). For middle- and upper-income renters, these two income tiers are the primary users of private auto and are very likely to work from home.
 
 
 <img width="1500" alt="nonfamily_transit_hh_performance_dashboard" src="https://github.com/user-attachments/assets/e51d9e6a-1ce8-4390-867b-ebab2ae8c4b3" />
 
-
+Again, the "privacy tax" adds to rent burden as mean commute time is controlled within 30 minutes, with single households having the highest rent burden at 33.3%, followed by roommate households at 24.1%, and mixed households at 17.8%. This pattern remains consistent within transit groups and household types. When mean commute time is controlled within a specific range for each transit mode, rent burden decreases from the highest (single households) to the lowest (mixed households). However, it is worth noting that single households commuting by public transit are the most difficult group, as these renters face a double burden: extra rent burden from the "privacy tax" and the longest commute time across all transit and household groups. Renters living in mixed households who use active transit, on the other hand, are very likely to experience the lightest burden in this trade-off, with the least rent burden and commute time across all household and transit groups.
 
 
 <img width="1500" alt="carpool_rent_burden_by_hh" src="https://github.com/user-attachments/assets/5a0168c5-11d7-4e32-8b3a-11bd6ccb6109" />
 
+Another interesting lens to look at the non-family group is carpool status, as carpooling may be another way to reduce rent burden, especially for the single household, non-sharing group. For roommate-only and mixed households, carpool status shows no major change in rent burden when comparing the drives-alone and carpool groups. However, single households flip this assumption that carpooling may reduce rent burden. Instead, affordable renters in the drives-alone group have a higher proportion at 54.7%, compared with 40.3% in the carpool group. As rent burden increases, the carpool group has a higher proportion than the drives-alone group, in the burdened (39.1% vs. 30.2%), severely burdened (14.7% vs. 10.4%), and extreme (5.9% vs. 4.6%) categories. Overall, carpool status shows no significant improvement in reducing rent burden across all household types.
 
 
+### Group Two (Family)
+
+<img width="1000" alt="family_housing_dashboard" src="https://github.com/user-attachments/assets/56274dd9-07fe-4de4-9fd7-4005bdc69a8c" />
+
+
+<img width="1000" alt="family_rent_burden_socioeconomic_profiles" src="https://github.com/user-attachments/assets/46883e5d-9809-41b1-a18e-20e083b47139" />
+
+
+<img width="1000" alt="family_rent_burden_racial_ethnic_profile" src="https://github.com/user-attachments/assets/c758ac4f-5e53-4766-80c8-485eaa915968" />
+
+
+<img width="1000" alt="family_transit_mode_income_profile" src="https://github.com/user-attachments/assets/5366edf7-bb7c-4008-a911-07e4ce2187a2" />
+
+
+<img width="1000" alt="family_transit_performance_dashboard" src="https://github.com/user-attachments/assets/9d7450c5-b773-4055-825e-0c54840814ad" />
+
+
+<img width="1000" alt="family_transit_performance_dashboard copy" src="https://github.com/user-attachments/assets/e3d96930-d076-41b2-9183-e8940b934ca2" />
+
+
+<img width="1000" alt="family_mixed_tradeoff_dashboard_wk_child" src="https://github.com/user-attachments/assets/630d3074-ab12-4c62-86a4-c460d28238cf" />
+
+
+<img width="1000" alt="family_mixed_worker_profile_dashboard" src="https://github.com/user-attachments/assets/d62870ba-48aa-4e25-b068-bfd44eb22c7c" />
+
+
+### Group Three (WFH)
+
+
+<img width="1000" alt="wfh_population_trends_10yr" src="https://github.com/user-attachments/assets/9050a938-b8b0-444a-9e1d-71c0f69e79c0" />
+
+
+<img width="1000" alt="wfh_dashboard" src="https://github.com/user-attachments/assets/23d200eb-0903-4a3a-9594-3e9bb85fd614" />
+
+
+<img width="1000" alt="wfh_rent_burden_trends_corrected" src="https://github.com/user-attachments/assets/c7faa34c-7ee2-49cc-98a9-f2bc57e60637" />
+
+
+<img width="1000" alt="wfh_housing_burden_dashboard" src="https://github.com/user-attachments/assets/0013eb6d-26b1-4cd7-bb28-49045807eb86" />
 
