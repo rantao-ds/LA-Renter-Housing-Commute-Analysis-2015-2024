@@ -282,8 +282,8 @@ In terms of income tier, the low-income group shows a very significant shift acr
 Overall, more than half of renters are Hispanic/Latino across all rent burden categories, with a slight increase in proportion as burden grows, from 51.3% at affordable to 60.7% at extreme. In contrast, White (Non-Hispanic) renters make up a sizeable share but decrease as burden increases, from 24.3% at affordable to 16.2% at extreme. Black/African American, Asian, and Other/Multi-racial renters represent comparatively smaller proportions and stay fairly stable across the four rent burden categories.
 
 
-
 <img width="1000" alt="family_mixed_worker_profile_dashboard" src="https://github.com/user-attachments/assets/d62870ba-48aa-4e25-b068-bfd44eb22c7c" />
+
 
 In family-based households, the number of stable workers in a family may impact rent burden, especially for families with children under the age of 18. 
 
