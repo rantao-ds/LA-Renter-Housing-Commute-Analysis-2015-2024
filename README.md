@@ -295,42 +295,34 @@ For multiple earners with children, family and mixed households show a completel
 
 Similarly, for single earners without children, the share in family households increases as rent burden increases, while in mixed households, a sizable share falls under burdened (20.2%) and extreme (22%) categories, with comparatively smaller shares in affordable and severely burdened categories.
 
-This indicates that single earners face tremendous financial difficulties, especially those with children, and this burden is even more pronounced in mixed households than in family households. This pattern, indeed, goes against what the "privacy tax" would predict: adding a roommate to a mixed household should help relieve the burden, but the data shows the opposite, with mixed households still facing worse outcomes than family households.
-
+This indicates that single earners face tremendous financial difficulties, especially those with children, with mixed households showing an even higher share in the extreme burden category than family households.
 
 <img width="1000" alt="family_transit_mode_income_profile" src="https://github.com/user-attachments/assets/5366edf7-bb7c-4008-a911-07e4ce2187a2" />
 
-
-
-
-
-
-
-
+Similarly, the majority of renters in group two commute by private auto, with a sizable portion working from home. Even though very few commute by public transit, it is the primary alternative transit mode compared with active and other transit. This pattern is consistent across all household types in group two.
 
 
 <img width="1000" alt="family_transit_performance_dashboard" src="https://github.com/user-attachments/assets/9d7450c5-b773-4055-825e-0c54840814ad" />
 
+Among private auto, active, and other transit modes, the income tier distribution closely mirrors the original 30/50/20 split: ranging from 30.6% to 37.1% for low-income, 45.7% to 51.1% for middle-income, and 16.3% to 18.3% for upper-income.
 
+For public transit in group two, low-income renters significantly increase to 48.6%, becoming the largest share within public transit, though closely followed by middle-income at 43.0%, while upper-income renters drop to just 8.5%. In contrast, upper-income renters in WFH increase to 35.2%, while low-income renters drop to 17.2%.
 
+Overall, middle-income renters stay very stable across all transit modes, while public transit and WFH show the most divergence, with low-income concentrated in public transit and upper-income concentrated in WFH.
 
 
 <img width="1000" alt="family_transit_performance_dashboard copy" src="https://github.com/user-attachments/assets/e3d96930-d076-41b2-9183-e8940b934ca2" />
 
+Overall, both family-based household types share a similar trade-off between rent burden and commute time. Rent burden stays within a similar level across all transit modes, while commute time varies, with active transit being the shortest and public transit being the longest. Private auto and other transit show a good balance on this trade-off.
 
-
+Additionally, mixed households have slightly less mean commute time and rent burden across all transit modes. While the average rent burden ranges from 27.9% to 31.7% in family households, mixed households' mean burden ranges from 23.4% to 25.5%. Among all transit modes, the mean commute time in mixed households is 1–5 minutes shorter than in family households.
 
 
 <img width="1000" alt="family_mixed_tradeoff_dashboard_wk_child" src="https://github.com/user-attachments/assets/630d3074-ab12-4c62-86a4-c460d28238cf" />
 
+From the lens of household working structure, this trade-off shows that family households have no clear advantage in managing rent burden, while average commute time stays similar across all household groups and working structures. In family households, rent burden increases as the number of earners decreases, and is also strongly associated with having children. In mixed households, single earners with children face the highest burden and multiple earners with no children face the least, while multiple earners with children and single earners without children show similar shares.
 
-
-
-
-
-
-
-
+Overall, single earners consistently face the greatest financial strain, especially when children are involved, and this holds true across both family and mixed households.
 
 
 ### Group Three (WFH)
