@@ -330,12 +330,38 @@ Overall, single earners consistently face the greatest financial strain, especia
 
 <img width="1000" alt="wfh_population_trends_10yr" src="https://github.com/user-attachments/assets/9050a938-b8b0-444a-9e1d-71c0f69e79c0" />
 
+The last group is an additional analysis looking only at WFH renters. All four household groups experience a significant growth of the number of WFH renters starting in 2020, keep increasing or staying stable through 2021 and 2022, then slightly decrease by 2023 due to the trend of back to office.
 
 <img width="1000" alt="wfh_dashboard" src="https://github.com/user-attachments/assets/23d200eb-0903-4a3a-9594-3e9bb85fd614" />
+
+Overall, the majority of WFH renters come from non-sharing households: 61.3% from family and 27% from single household. For space-sharing households, it is less likely to have WFH renters in both roommate and mixed households, 9.5% and 2.2% respectively.
+
+It is interesting to note that the family household share of all WFH renters actually decreased by 3% before and after COVID-19. Similarly, the roommate household share also decreased by 0.5%. In contrast, the share for single and mixed households increased by 3.3% and 0.2%, respectively.
 
 
 <img width="1000" alt="wfh_rent_burden_trends_corrected" src="https://github.com/user-attachments/assets/c7faa34c-7ee2-49cc-98a9-f2bc57e60637" />
 
+Overall, the average rent burden for all households stayed under 50% over the 10-year period, with single households having the highest burden and mixed households having the least. Also, the average rent burden for all households in the post-COVID period is lower than before COVID.
+
+Out of the four household groups, family households show the most stable pattern, with steady increases and decreases that stay within the range of roughly 24% to 32%. The rent burden in the post-COVID period is significantly lower than before COVID.
+
+For single households, the average rent burden slightly decreases from 40% in 2015 to about 34% in 2018, with a minor increase in 2019. A sharp decrease happened during COVID-19 in 2020, and the burden has been steadily increasing since. Similar to family households, the rent burden in the post-COVID period is significantly lower than before COVID.
+
+For roommate households, the average rent burden was quite unstable before COVID, moving up and down from year to year with no clear direction. Since COVID-19 in 2020, the burden has been more stable, with a slight decrease. Overall, the rent burden in the post-COVID period is slightly lower than before COVID.
+
+For mixed households, the average rent burden peaks in 2016 and keeps moving down until COVID-19 in 2020, then stays stable between 2020 and 2022. After a sharp decrease in 2023, the average rent burden goes back to a higher level in 2024. Overall, the rent burden in the post-COVID period is slightly lower than before COVID.
+
+
 
 <img width="1000" alt="wfh_housing_burden_dashboard" src="https://github.com/user-attachments/assets/0013eb6d-26b1-4cd7-bb28-49045807eb86" />
+
+Overall, 90.8% of WFH renters have less than 50% rent burden, with the majority falling in the affordable category. Single households, again, have the lowest share in both the affordable and burdened categories (less than 50%) but the highest share in both severely burdened and extreme categories (over 50%) compared with the rest of the household groups. This indicates that even though single household renters have the flexibility to relocate anywhere to lower their rent, the "privacy tax" still persists.
+
+
+
+
+
+
+
+
 
