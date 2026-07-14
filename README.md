@@ -362,16 +362,29 @@ Overall, 90.8% of WFH renters have less than 50% rent burden, with the majority 
 
 ## Modeling
 
-While the EDA describes patterns in the rent-commute trade-off, the goal of the modeling section is to test and predict them more formally. This project uses two models:
+While the EDA describes patterns in the rent-commute trade-off, the goal of the modeling section is to test and predict them more formally. To stay consistent with the EDA, the modeling process is applied separately to group one and group two. This project uses two models:
 
-K-Means Clustering – groups renters into distinct types based on income, rent burden, commute time, work hours, and age, to see if natural renter "profiles" emerge from the data.
-Logistic Regression – predicts which renters are more likely to fall into high rent burden and long commute at the same time, and identifies which factors matter most.
+**K-Means Clustering** – groups renters into distinct types based on income, rent burden, commute time, work hours, and age, to see if natural renter "profiles" emerge from the data.
 
+**Logistic Regression** – predicts which renters are more likely to fall into both high rent burden and long commute at the same time, using the 30/30 rule (30 minutes commute / 30% rent burden) as the baseline, and identifies which factors matter most.
 
-### K-MEANS
-
+### K-Means Clustering
 
 #### GROUP ONE 
+
+<img width="1000" alt="K-MEAN(G1)" src="https://github.com/user-attachments/assets/08e6ce7e-d9cc-4a29-8bc8-3a977d713b79" />
+
+In group one (non-family households), which includes single, roommate-only, and roommate renters in mixed households, renters are grouped into five clusters (k = 5). As these renters are responsible for the trade-off at the individual level, the clustering variables focus on individual-level income, rent burden, commute time, work hours, and age, rather than household-level measures.
+
+**Cluster 1** is considered the Ultra-Elite, with the highest income ($302,559) and the lowest rent burden (10.5%) of the five clusters. However, this group still faces a normal commute of around 26 minutes, showing that even high income doesn't fully escape LA's traffic, with commute times not much shorter than the other clusters.
+
+**Cluster 2** is considered the New Elite, which is the youngest group (31.5) with a moderate income and the lowest combination of rent burden and commute time, likely reflecting young professionals sharing housing to keep both costs down. 
+
+**Cluster 3** has the lowest income ($32,908) and by far the highest rent burden (58.3%), representing the most financially burdened renters in this group. 
+
+**Cluster 4** is the oldest group (52.9) with a relatively short commute (25.3 min) and moderate rent burden, possibly benefiting from long-term housing tenure. 
+
+**Cluster 5** stands out with an extreme average commute of 72.9 minutes, more than double any other cluster, while maintaining moderate income and rent burden, suggesting these renters trade a long commute for more affordable housing.
 
 
 
