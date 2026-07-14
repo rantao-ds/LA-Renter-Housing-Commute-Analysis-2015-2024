@@ -360,8 +360,50 @@ Overall, 90.8% of WFH renters have less than 50% rent burden, with the majority 
 
 
 
+## Modeling
+
+While the EDA describes patterns in the rent-commute trade-off, the goal of the modeling section is to test and predict them more formally. This project uses two models:
+
+K-Means Clustering – groups renters into distinct types based on income, rent burden, commute time, work hours, and age, to see if natural renter "profiles" emerge from the data.
+Logistic Regression – predicts which renters are more likely to fall into high rent burden and long commute at the same time, and identifies which factors matter most.
 
 
+### K-MEANS
+
+
+#### GROUP ONE 
+
+
+
+[nonfamily_renter_bubble_chart_high_legibility.pdf](https://github.com/user-attachments/files/29959228/nonfamily_renter_bubble_chart_high_legibility.pdf)
+
+
+
+#### GROUP TWO
+
+[family_renter_bubble_chart_high_legibility.pdf](https://github.com/user-attachments/files/29959234/family_renter_bubble_chart_high_legibility.pdf)
+
+
+
+### GLM(binomical)
+
+
+#### GROUP ONE 
+
+
+[nonfamily_glm_roc_curve.pdf](https://github.com/user-attachments/files/29959247/nonfamily_glm_roc_curve.pdf)
+
+
+[nonfamily_glm_weighted_roc_curve.pdf](https://github.com/user-attachments/files/29959250/nonfamily_glm_weighted_roc_curve.pdf)
+
+
+
+#### GROUP TWO
+
+
+[family_glm_roc_curve.pdf](https://github.com/user-attachments/files/29959256/family_glm_roc_curve.pdf)
+
+[family_glm_weighted_roc_curve.pdf](https://github.com/user-attachments/files/29959259/family_glm_weighted_roc_curve.pdf)
 
 
 
