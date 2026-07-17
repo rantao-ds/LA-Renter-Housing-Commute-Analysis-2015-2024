@@ -450,10 +450,12 @@ dheawuhfijhajasdjfhjkasedhfjkahsdjkfhjadshfklhasdkfhaklsdhfnkdsnfjchnsakfhaklshf
 <img width="600" alt="model_performance(g1)" src="https://github.com/user-attachments/assets/8cf924e0-3b1f-4d40-9612-0f919b19a329" />
 
 
-[nonfamily_glm_roc_curve.pdf](https://github.com/user-attachments/files/29959247/nonfamily_glm_roc_curve.pdf)
 
 
-[nonfamily_glm_weighted_roc_curve.pdf](https://github.com/user-attachments/files/29959250/nonfamily_glm_weighted_roc_curve.pdf)
+<img width="500" alt="nonfamily_glm_roc_curve-1" src="https://github.com/user-attachments/assets/5ca7a8aa-b24f-44ee-96f5-5c86f89179d8" />
+
+<img width="500" alt="nonfamily_glm_weighted_roc_curve-1" src="https://github.com/user-attachments/assets/b0b5b211-970b-43ed-8f37-f792f8366eed" />
+
 
 
 
@@ -469,9 +471,8 @@ dheawuhfijhajasdjfhjkasedhfjkahsdjkfhjadshfklhasdkfhaklsdhfnkdsnfjchnsakfhaklshf
 
 
 
-[family_glm_roc_curve.pdf](https://github.com/user-attachments/files/29959256/family_glm_roc_curve.pdf)
 
-[family_glm_weighted_roc_curve.pdf](https://github.com/user-attachments/files/29959259/family_glm_weighted_roc_curve.pdf)
+<img width="500" alt="family_glm_roc_curve-1" src="https://github.com/user-attachments/assets/9da64081-54af-4253-9687-dce9f5ca9674" />
 
-
+<img width="500" alt="family_glm_weighted_roc_curve-1" src="https://github.com/user-attachments/assets/32cd6727-975c-4c78-953d-34be47489c5e" />
 
