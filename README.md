@@ -6,7 +6,56 @@ As a renter living in LA, the trade-off between housing affordability and commut
 
 
 ## Data
-The data was retrieved from IPUMS USA, selecting samples from the ACS 5-Year datasets for **2015–2019** and **2020–2024**, restricted to **Los Angeles County, California**. 
+The data was retrieved from IPUMS USA, selecting samples from the ACS 5-Year datasets for **2015–2019** and **2020–2024**, restricted to **Los Angeles County, California**. For detailed on variable selection and extra variables added, please check variable section. 
+
+### The data is divided into four groups:
+
+**Single Renter Household** 
+A single-person household in which the person is a stable worker living alone. After the wrangling, 21,974 observations remain for analysis.
+
+**Roommate Renter Household** 
+A multi-person household in which the head is a stable worker and all other household members are non-family, with at least one roommate also being a stable worker. After the wrangling, 9,229 observations remain for analysis.
+
+**Family Renter Household** 
+A multi-person household in which the head is a stable worker and all other household members share a family-based relationship. After the wrangling, 85,848 observations remain for analysis. 
+
+**Mixed Renter Household** 
+A multi-person household in which the head is a stable worker, living with family members who share a family-based relationship with the head (not required to be workers), and at least one non-family roommate who is also a stable worker. Following data wrangling, 3,454 observations remain for analysis.
+
+
+### The criteria for renter household and unit structure:
+
+- The ownership of the dwelling (tenure) is rented, with cash rent.
+
+- The unit structure must be a physical housing unit: a 1-family house (detached or attached) or a multi-family building with 2 or more units.
+
+- For multi-person households, only two-to-five-person households were retained, as these represent the majority within that ACS 5-year sample (82.4% in ACS 2019, 83.3% in ACS 2024).
+
+
+### The criteria of a stable worker:
+
+A person who is 1) aged 24–64, 2) currently at work, 3) working between 20 and 80 hours per week, and 4) earning an annual income greater than or equal to the annual minimum wage in Los Angeles County for that year.
+
+
+### Analytical Framework & Groupings
+
+To facilitate exploratory data analysis (EDA) and modeling, the four original household types were combined into three distinct analytical groups.
+
+**Group_One**
+
+Group One represents an individual-level analysis focusing on nonfamily living arrangements. This group combines individuals from single renter households, roommate renter households, and roommates living in mixed renter households. Following the data wrangling and merging process, Group One retains a sample of 32,604 observations for descriptive and predictive analysis.
+
+
+**Group_Two**
+
+Group Two represents a household-level analysis focusing on family living arrangements. This group combines individuals from family renter households and families living in mixed renter households. Following the data wrangling and merging process, Group Two retains a sample of 87,901 observations for descriptive and predictive analysis.
+
+
+**Group_Three**
+
+Group Three is an additional group focusing exclusively on work-from-home (WFH) individuals across all households. Following the data wrangling and merging process, Group Three retains a sample of 13,979 observations for descriptive analysis.
+
+
 
 The following variables were selected and processed for the analysis:
 
@@ -42,34 +91,6 @@ The following variables were selected and processed for the analysis:
 * `TRANWORK`: Primary transit mode of travel to work
 * `CARPOOL`: Carpooling status
 * `TRANTIME`: One-way commute travel time (in minutes)
-
-### The data is divided into four groups:
-
-**Single Renter Household** 
-A single-person household in which the person is a stable worker living alone. After the wrangling, 21,974 observations remain for analysis.
-
-**Roommate Renter Household** 
-A multi-person household in which the head is a stable worker and all other household members are non-family, with at least one roommate also being a stable worker. After the wrangling, 9,229 observations remain for analysis.
-
-**Family Renter Household** 
-A multi-person household in which the head is a stable worker and all other household members share a family-based relationship. After the wrangling, 85,848 observations remain for analysis. 
-
-**Mixed Renter Household** 
-A multi-person household in which the head is a stable worker, living with family members who share a family-based relationship with the head (not required to be workers), and at least one non-family roommate who is also a stable worker. Following data wrangling, 3,454 observations remain for analysis.
-
-
-### The criteria for renter household and unit structure:
-
-- The ownership of the dwelling (tenure) is rented, with cash rent.
-
-- The unit structure must be a physical housing unit: a 1-family house (detached or attached) or a multi-family building with 2 or more units.
-
-- For multi-person households, only two-to-five-person households were retained, as these represent the majority within that ACS 5-year sample (82.4% in ACS 2019, 83.3% in ACS 2024).
-
-
-### The criteria of a stable worker:
-
-A person who is 1) aged 24–64, 2) currently at work, 3) working between 20 and 80 hours per week, and 4) earning an annual income greater than or equal to the annual minimum wage in Los Angeles County for that year.
 
 
 ### The additional variables added for analysis:
@@ -160,24 +181,6 @@ The `range_burden` variable categorizes the percentage of `rent_burden` into `af
 
 The `income_tier` variable categorizes income into `low_income` (bottom 30th percentile), `middle_income` (30th–80th percentile), and `upper_income` (80th–100th percentile), based on quantiles calculated separately by survey year within each household category. Individual-level groups use individual income, while household-level groups use household income.
 
-
-### Analytical Framework & Groupings
-
-To facilitate exploratory data analysis (EDA) and modeling, the four original household types were combined into three distinct analytical groups.
-
-**Group_One**
-
-Group One represents an individual-level analysis focusing on nonfamily living arrangements. This group combines individuals from single renter households, roommate renter households, and roommates living in mixed renter households. Following the data wrangling and merging process, Group One retains a sample of 32,604 observations for descriptive and predictive analysis.
-
-
-**Group_Two**
-
-Group Two represents a household-level analysis focusing on family living arrangements. This group combines individuals from family renter households and families living in mixed renter households. Following the data wrangling and merging process, Group Two retains a sample of 87,901 observations for descriptive and predictive analysis.
-
-
-**Group_Three**
-
-Group Three is an additional group focusing exclusively on work-from-home (WFH) individuals across all households. Following the data wrangling and merging process, Group Three retains a sample of 13,979 observations for descriptive analysis.
 
 
 
