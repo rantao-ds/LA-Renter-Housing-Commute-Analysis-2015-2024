@@ -366,7 +366,7 @@ While the EDA describes patterns in the rent-commute trade-off, the goal of the 
 
 **K-Means Clustering** – groups renters into distinct types based on income, rent burden, commute time, work hours, and age, to see if natural renter "profiles" emerge from the data.
 
-**Logistic Regression** – predicts which renters are more likely to fall into both high rent burden and long commute at the same time, using the 30/30 rule (30 minutes commute / 30% rent burden) as the baseline, and identifies which factors matter most.
+**Logistic Regression** – predicts which renters are most likely to face both high rent burdens and long commutes simultaneously, using the "30/30 rule" (>30% rent burden and >30-minute commute) as the threshold, and identifies which demographic and transit factors matter most.
 
 ### K-Means Clustering
 
@@ -376,32 +376,72 @@ While the EDA describes patterns in the rent-commute trade-off, the goal of the 
 
 In group one (non-family households), which includes single, roommate-only, and roommate renters in mixed households, renters are grouped into five clusters (k = 5). As these renters are responsible for the trade-off at the individual level, the clustering variables focus on individual-level income, rent burden, commute time, work hours, and age, rather than household-level measures.
 
-**Cluster 1** is considered the Ultra-Elite, with the highest income ($302,559) and the lowest rent burden (10.5%) of the five clusters. However, this group still faces a normal commute of around 26 minutes, showing that even high income doesn't fully escape LA's traffic, with commute times not much shorter than the other clusters.
 
-**Cluster 2** is considered the New Elite, which is the youngest group (31.5) with a moderate income and the lowest combination of rent burden and commute time, likely reflecting young professionals sharing housing to keep both costs down. 
-
-**Cluster 3** has the lowest income ($32,908) and by far the highest rent burden (58.3%), representing the most financially burdened renters in this group. 
-
-**Cluster 4** is the oldest group (52.9) with a relatively short commute (25.3 min) and moderate rent burden, possibly benefiting from long-term housing tenure. 
-
-**Cluster 5** stands out with an extreme average commute of 72.9 minutes, more than double any other cluster, while maintaining moderate income and rent burden, suggesting these renters trade a long commute for more affordable housing.
+**Cluster 1** groups renters with the highest income ($302,559) and the lowest rent burden (10.5%) of the five clusters. Renters in this cluster are in their mid-career, with an average age of 41.4, working full-time. It is interesting to note that the average commute time is not the lowest of the five clusters, even though they have the lowest burden and the financial ability to move to housing closer to work. This indicates that commute time may not be the main concern for this cluster, as they simply expect to be on the road for about 20 to 30 minutes, and the factors driving their choices may go beyond the trade-off, such as housing quality, neighborhood, or personal preference.
 
 
+**Cluster 2** groups the youngest full-time renters (31.5) with the lowest combination of rent burden (23.9%) and commute time (24 min). This cluster has the largest sample size of the five clusters. Despite being the youngest group, their income is the second highest among all clusters, possibly suggesting they work in high-paying fields for their age, such as tech. However, this cluster is more likely to face the trade-off, as their income is more moderate ($72,343), but they still manage it well relative to the other clusters.
 
-[nonfamily_renter_bubble_chart_high_legibility.pdf](https://github.com/user-attachments/files/29959228/nonfamily_renter_bubble_chart_high_legibility.pdf)
 
+**Cluster 3** groups renters with the highest rent burden (58.3%) and lowest income ($32,908), and has the third-largest sample size of the five clusters. Renters in this cluster are in their young-to-mid career, earning close to minimum wage, with the lowest average weekly hours (35.1) among all clusters, indicating the group likely includes a mix of part-time and full-time workers. It is also interesting to note that average commute time falls at around 26.5 minutes, even with the highest rent burden. The preference for commute time indicates that housing location or proximity to work may matter more to this cluster than lowering their rent burden, despite financial strain.
+
+
+**Cluster 4** groups the oldest full-time renters (52.9), with a typical commute time (25.3 min) and moderate rent burden (25.4%). This cluster has the second-largest sample size, and renters in this cluster are in their late-career to pre-retirement stage, earning a moderate income ($69,191) for their age. Similar to Cluster 2, this cluster manages the trade-off well, but they are likely benefiting from lower rent as long-term renters, possibly protected by rent control or having secured a lease years ago before prices rose. This suggests that renter tenure may play a role in easing this trade-off. 
+
+
+**Cluster 5** has the smallest sample size of the five clusters, with the longest average commute time (72.9 minutes) and a moderate rent burden (26.3%). Renters in this cluster are full-time workers in their young-to-mid career, earning a moderate income ($65,381). Even though it represents a small portion of group one renters, this is a very typical pattern in Los Angeles: living farther away from work, likely over 30 miles, to keep rent more affordable. This shows the cluster trading commute time directly for affordability, the opposite of the pattern seen in Cluster 3.
+
+
+Overall, non-family households show two types of trade-off. The first (Clusters 1 through 4) keeps commute time around 25 minutes, with rent burden varying mainly by income: the higher the income, the lower the rent burden. Therefore, the trade-off in these clusters likely flips: it's less about commute time versus rent burden, and more about income determining how much rent someone can afford within that fixed commute radius. The second trade-off, and the main focus of this study, is Cluster 5: renters accepting a much longer commute to keep rent burden lower and maintain financial stability.
+
+It's also worth noting that Cluster 4 suggests renter tenure may play a role separate from income. Despite only moderate income, older renters in this cluster maintain a manageable rent burden, likely benefiting from long-term leases or rent-controlled units rather than income alone.
+
+
+
+<img width="1000"  alt="png_nonfamily_renter_bubble_chart_high_legibility-1" src="https://github.com/user-attachments/assets/b85d6e4e-14cf-4856-949a-e5ce4bdab606" />
+
+The scatterplot shows Cluster 1 (red, highest income) and Cluster 3 (green, lowest income) sitting at opposite corners, indicating that higher income is strongly tied to a lower rent burden. Clusters 2, 4, and 5 overlap densely in the middle-to-left side of the chart (the lower-to-moderate income zone), but a few outliers from Cluster 5 (purple) and Cluster 4 (yellow) fall even deeper into the high-burden corner, suggesting some renters in these clusters still face financial constraints. With bubble size representing commute time, most bubbles stay within the 30-minute range, with only Cluster 5 (purple) showing noticeably larger bubbles. This indicates that the trade-off is more about income versus rent burden for most nonfamily renters, with Cluster 5 being the only cluster that actually experiences the classic rent-commute trade-off.
 
 
 #### GROUP TWO
 
-[family_renter_bubble_chart_high_legibility.pdf](https://github.com/user-attachments/files/29959234/family_renter_bubble_chart_high_legibility.pdf)
+<img width="1000" alt="k-mean(g2)" src="https://github.com/user-attachments/assets/21c0a1a8-82e5-43b4-bded-d18898eb2660" />
 
+In group two (family households), which includes family-only households and family renters in mixed households, renters are grouped into six clusters (k = 6), reflecting the additional household-level variables, such as family size, number of family workers, and number of children, that shape this group's trade-off.
+
+**Cluster 1** groups family-based renters with the highest household income ($218,361) and lowest rent burden (14.3%). Renters in this cluster are full-time workers in their mid-career, with an average family size of 2.51 and 1.93 earners, and are unlikely to have children. It is interesting to note that this cluster closely matches the pattern of Cluster 1 in group one, as they also have a typical commute time of 31.5 minutes, even with high income and the ability to move wherever they like. This suggests housing choice in this cluster may be shaped by factors like neighborhood or housing quality, or by keeping each earner's commute to around 30 minutes.
+
+
+**Cluster 2** groups family-based renters with the largest family size (4.39) and highest number of children (2.03) of the six clusters, and has the third-largest sample size. While this cluster has an average of only 1.73 earners and a household income of $83,141, which is considered relatively low on a per-capita basis given the large family size, the trade-off between rent burden (27.5%) and commute time (31.3 min) indicates this cluster is managing it well. However, households in this cluster may benefit from housing subsidy programs, but are still likely to face financial constraints.
+
+
+**Cluster 3** groups family-based renters with a higher average household income ($124,722) and an average family size of 4.14. This cluster has the highest average number of earners (3.16) of the six clusters and is very unlikely to have children, suggesting strong financial capacity from multiple working adults. In terms of the trade-off, with a typical commute time of 30.6 minutes, the average rent burden in this cluster is only 18.6%. This is a well-earning household with strong financial ability to ease rent burden. However, commute time suggests that even with multiple earners and no children to accommodate, this cluster still doesn't optimize for a shorter commute, similar to the pattern seen in Cluster 1.
+
+
+**Cluster 4** groups family-based renters with the lowest household income ($33,997) and average number of earners (1.32) of the six clusters, supporting a larger family size of 3.12. As expected, this cluster also has the largest rent burden (62.3%) of the six clusters, while maintaining a typical commute time of 30.5 minutes. This household is likely to have one child, and the income of $33,997 suggests that the sole earner in the household may only just clear the minimum wage threshold needed to support a family of three with one child. This indicates greater financial difficulty than Cluster 2, which has a higher household income. This cluster is likely supported by housing subsidies, but still faces a large rent burden. Even so, they still manage to keep commute time within 30 minutes.
+
+
+**Cluster 5** groups family-based renters with the second-highest household income ($91,002), and is the largest sample size of the six clusters. The household in this cluster is a very typical two-working-couple family, with an average family size of 2.39 and 1.86 earners, and very unlikely to have children. It is also interesting to note that renters in this cluster are the youngest, at 31.5 years old. This cluster manages the trade-off well, with a rent burden around 25% and a commute time of 31.2 minutes. Overall, this cluster reflects a young, dual-income household prioritizing financial stability early in their careers.
+
+
+**Cluster 6** groups family-based renters representing the second-largest sample size and the oldest renters (52.7 years old) of the six clusters. In this cluster, the household income of $81,381 is moderate among all clusters, with an average of 1.66 earners supporting a family of 2.69. This cluster likely represents older renter couples in the empty-nest stage, whose children have grown up, established their own families, and moved out. With a rent burden of 26.1% and a commute time of 31.8 minutes, this cluster manages the trade-off well, similar to Cluster 5. 
+
+
+Overall, it is interesting to note that all clusters keep commute time around 30 minutes, despite different rent burdens depending on household structure. The number of dependent children and earners has a profound impact on rent burden, which was also discussed in the EDA. Therefore, the trade-off in family-based households likely flips: since average commute time stays around 30 minutes across all clusters, the trade-off is more likely about finding housing within that 30-minute commute that can support the family's structure and income, rather than about commute time versus rent burden.
+
+
+<img width="1000" alt="family_renter_bubble_chart_high_legibility-1" src="https://github.com/user-attachments/assets/614f1ff4-2690-4178-b338-506974b5d3d1" />
+
+Just like nonfamily households, the family clusters show the same core pattern: rent burden is driven almost entirely by income rather than commute time. Cluster 4 (yellow, lowest income) and Cluster 1 (red, highest income) sit at opposite ends of the chart. However, unlike nonfamily renters, the remaining clusters (2, 3, 5, and 6) overlap densely across the middle and right side of the chart, pushing heavily into the high-income zone. This rightward shift is because nonfamily renters solely rely on their individual incomes, whereas family households reflect pooled household incomes. Despite the rightward shift, a few outlier bubbles from Cluster 2 fall into the Cluster 4 zone, suggesting some households are still likely to face financial constraints. Unlike nonfamily households, most bubble sizes across all six clusters stay within the 30-to-60-minute range, with very few large bubbles mixed into each cluster. This further reinforces that the trade-off is more about income versus rent burden than commute time for family households.
 
 
 ### GLM(binomical)
 
 
 #### GROUP ONE 
+
+<img width="500" alt="glm(g1)" src="https://github.com/user-attachments/assets/a430b240-ad49-45ce-bf36-4cdb5d9d5564" />
+
 
 
 [nonfamily_glm_roc_curve.pdf](https://github.com/user-attachments/files/29959247/nonfamily_glm_roc_curve.pdf)
@@ -412,6 +452,11 @@ In group one (non-family households), which includes single, roommate-only, and 
 
 
 #### GROUP TWO
+
+
+
+
+
 
 
 [family_glm_roc_curve.pdf](https://github.com/user-attachments/files/29959256/family_glm_roc_curve.pdf)
