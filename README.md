@@ -440,7 +440,8 @@ Just like nonfamily households, the family clusters show the same core pattern: 
 
 #### GROUP ONE 
 
-<img width="500" alt="glm(g1)" src="https://github.com/user-attachments/assets/a430b240-ad49-45ce-bf36-4cdb5d9d5564" />
+<img width="390" alt="glm(g1)" src="https://github.com/user-attachments/assets/8f51d6aa-caca-4263-9a80-93fa2fdbdd7a" />
+
 
 
 
@@ -454,6 +455,7 @@ Just like nonfamily households, the family clusters show the same core pattern: 
 #### GROUP TWO
 
 
+<img width="410" alt="glm(g2)" src="https://github.com/user-attachments/assets/c17211c9-4dd7-4cd8-894d-f28d7a4663eb" />
 
 
 
