@@ -443,6 +443,11 @@ Just like nonfamily households, the family clusters show the same core pattern: 
 <img width="390" alt="glm(g1)" src="https://github.com/user-attachments/assets/8f51d6aa-caca-4263-9a80-93fa2fdbdd7a" />
 
 
+dheawuhfijhajasdjfhjkasedhfjkahsdjkfhjadshfklhasdkfhaklsdhfnkdsnfjchnsakfhaklshfksdhfkdsnckcskajhfksahdfkahsfghdskahhfadjshfjkasdhfjkhasdjkfhjsadkhfjhdjsakhfjsdhajkljaslkhdjkasdjsakhfjksdncjsdahhjdsfjhsjadkfhajk
+
+
+
+<img width="600" alt="model_performance(g1)" src="https://github.com/user-attachments/assets/8cf924e0-3b1f-4d40-9612-0f919b19a329" />
 
 
 [nonfamily_glm_roc_curve.pdf](https://github.com/user-attachments/files/29959247/nonfamily_glm_roc_curve.pdf)
@@ -458,6 +463,9 @@ Just like nonfamily households, the family clusters show the same core pattern: 
 <img width="410" alt="glm(g2)" src="https://github.com/user-attachments/assets/c17211c9-4dd7-4cd8-894d-f28d7a4663eb" />
 
 
+
+
+<img width="600" alt="model_performance(g2)" src="https://github.com/user-attachments/assets/42e46c79-b454-44de-94c9-f05a578d18ac" />
 
 
 
