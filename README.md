@@ -394,3 +394,13 @@ The classification threshold was set at 10%, matching the actual prevalence of d
 
 The ROC curve shows an AUC of 0.80, indicating the model performs well in correctly classifying dual-burden family households. The weighted ROC curve, accounting for population weights (PERWT), shows a very similar AUC of 0.79, suggesting the model's performance remains consistent when generalized to the broader LA family renter population. Overall, the group two model performs slightly better than group one (0.80 vs. 0.78), likely reflecting the added predictive power of the household-level variables.
 
+
+
+## Conclusion
+
+Overall, this project confirms that the classic trade-off between housing affordability and commute time flips in Los Angeles County, as stable working renters largely accept the traffic and manage it within a reasonable time frame. Instead, income and household structure are the key drivers of housing strain. This is largely due to Los Angeles being a car-dependent city with limited availability of a reliable alternative public transit system. This trade-off may tell a completely different story in cities like Boston or New York, where better metro systems and higher ridership give renters more flexibility in where they choose to live. Also, it is interesting to note that certain low-income and older renters household has an unexpeted comparatively low rent burden which is likely benefited from housing subsidy program like section 8 and long-term tenureship. With generification (replacement) and rent increase, the low-income household still may likely suffer from rent burden with the subsidy, particularlly the households with specific socialeconomic conditions are likely fall into double burden (30/30) as discussed early. Last, this project only focus on stable working renters, while there are large population work below the minimum income threadhold, particularlly the illegal immigrant and they are more likely to face the classic trade-off. ........................
+
+
+
+
+
