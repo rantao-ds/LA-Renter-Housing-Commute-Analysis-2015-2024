@@ -37,7 +37,6 @@ For detailed information about the variables and codes, please refer to the atta
 
 
 
-
 ### The additional variables added for analysis:
 
 ***person_id***
@@ -94,7 +93,10 @@ The `num_dependent_children` variable identifies the number of family members un
 
 ***FTOTINC (mixed household)***
 
-The `FTOTINC` (Family Total Income) variable represents the aggregated income of all family-related members living in a mixed household. It sums the individual incomes(`INCTOT`)  of all related family members (including the head) regardless of whether they meet the study's specific criteria for a 'stable worker', while excluding the income of roommates.
+The `FTOTINC` (Family Total Income) variable represents the aggregated income of all family-related members living in a mixed household. It sums the individual incomes (`INCTOT`) of all related family members (including the head), regardless of whether they meet the study's specific criteria for a stable worker, while excluding the income of roommates.
+
+> **Note:** For mixed renter households in group two, `FTOTINC` is used as the household income measure and relabeled as `HHINCOME` for consistency with family households.
+
 
 
 ***worker_type (family & mixed household)***
