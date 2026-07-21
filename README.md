@@ -7,7 +7,7 @@ As a renter living in LA, the trade-off between housing affordability and commut
 
 ## Data
 
-The data was retrieved from IPUMS USA, selecting samples from the ACS 5-Year datasets for **2015–2019** and **2020–2024**, restricted to **Los Angeles County, California**. For detailed information on variable selection and additional variables, please refer to the [Variable Selection Details](variable-selection-details.md) page.
+The data retrieved from IPUMS USA, with samples selected from the ACS 5-Year datasets for **2015–2019** and **2020–2024**, restricted to **Los Angeles County, California**. For detailed information on variable selection and additional variables, please refer to the [Variable Selection Details](variable-selection-details.md) page.
 
 ### Renter Household & Unit Structure Criteria:
 
@@ -21,18 +21,18 @@ A person who is:
 1. Aged 24–64,
 2. Currently at work,
 3. Working between 20 and 80 hours per week, and
-4. Earning an annual income greater than or equal to the annual minimum wage in Los Angeles County for that year.
+4. Earning an annual income greater than or equal to the annual minimum wage in California for that year ([U.S. DOL Minimum Wage History](https://www.dol.gov/agencies/whd/state/minimum-wage/history)). 
 
 ### Renter Household Classifications
 
 **Single Renter Household** 
-A single-person household in which the person is a stable worker living alone. After the wrangling, 21,974 observations remain for analysis.
+A single-person household in which the person is a stable worker living alone. Following data wrangling, 21,974 observations remain for analysis.
 
 **Roommate Renter Household** 
-A multi-person household in which the head is a stable worker and all other household members are non-family, with at least one roommate also being a stable worker. After the wrangling, 9,229 observations remain for analysis.
+A multi-person household in which the head is a stable worker and all other household members are non-family roommates. Following data wrangling, 9,229 observations remain for analysis.
 
 **Family Renter Household** 
-A multi-person household in which the head is a stable worker and all other household members share a family-based relationship. After the wrangling, 85,848 observations remain for analysis. 
+A multi-person household in which the head is a stable worker and all other household members share a family-based relationship. Following data wrangling, 85,848 observations remain for analysis. 
 
 **Mixed Renter Household** 
 A multi-person household in which the head is a stable worker, living with family members who share a family-based relationship with the head (not required to be workers), and at least one non-family roommate who is also a stable worker. Following data wrangling, 3,454 observations remain for analysis.
@@ -127,7 +127,7 @@ In group one, the overall transit distribution is pretty similar across all hous
 
 <img width="650" alt="transit_mode_income_profile_high_contrast_green" src="https://github.com/user-attachments/assets/11c4c7c2-58ec-45f7-9588-fefd5bfd8ff7" />
 
-In group one, renters using active and other transit have a very similar share across all income tiers. However, the low-income group is more likely to use public transit (57%) compared with private auto (29.9%) and work from home (18.9%). For middle- and upper-income renters, these two income tiers are the primary users of private auto and are very likely to work from home.
+In group one, active transit and other transit show the most balanced income distribution across all three tiers. However, the low-income group is more likely to use public transit (57%) compared with private auto (29.9%) and work from home (18.9%). For middle- and upper-income renters, these two income tiers are the primary users of private auto and are very likely to work from home.
 
 
 <img width="850" alt="nonfamily_transit_hh_performance_dashboard" src="https://github.com/user-attachments/assets/e51d9e6a-1ce8-4390-867b-ebab2ae8c4b3" />
@@ -137,7 +137,7 @@ Again, the "privacy tax" adds to rent burden as mean commute time is controlled 
 
 <img width="850" alt="carpool_rent_burden_by_hh" src="https://github.com/user-attachments/assets/5a0168c5-11d7-4e32-8b3a-11bd6ccb6109" />
 
-Another interesting lens to look at the non-family group is carpool status, as carpooling may be another way to reduce rent burden, especially for the single household, non-sharing group. For roommate-only and mixed households, carpool status shows no major change in rent burden when comparing the drives-alone and carpool groups. However, single households flip this assumption that carpooling may reduce rent burden. Instead, affordable renters in the drives-alone group have a higher proportion at 54.7%, compared with 40.3% in the carpool group. As rent burden increases, the carpool group has a higher proportion than the drives-alone group, in the burdened (39.1% vs. 30.2%), severely burdened (14.7% vs. 10.4%), and extreme (5.9% vs. 4.6%) categories. Overall, carpool status shows no significant improvement in reducing rent burden across all household types.
+Another interesting lens to look at the non-family group is carpool status, as carpooling may be another way to reduce rent burden, especially for the single household, non-sharing group. For roommate-only and mixed households, carpool status shows no major change in rent burden when comparing the drives-alone and carpool groups. However, single households flip this assumption that carpooling may reduce rent burden. Instead, affordable renters in the drives-alone group have a higher proportion at 54.7%, compared with 40.3% in the carpool group. Across the more burdened categories, the carpool group consistently shows a higher proportion than the drives-alone group: burdened (39.1% vs. 30.2%), severely burdened (14.7% vs. 10.4%), and extreme (5.9% vs. 4.6%). Overall, carpool status shows no significant improvement in reducing rent burden across all household types.
 
 
 ### Group Two (Family)
@@ -176,16 +176,16 @@ This indicates that single earners face tremendous financial difficulties, espec
 
 <img width="650" alt="family_transit_mode_income_profile" src="https://github.com/user-attachments/assets/5366edf7-bb7c-4008-a911-07e4ce2187a2" />
 
-Similarly, the majority of renters in group two commute by private auto, with a sizable portion working from home. Even though very few commute by public transit, it is the primary alternative transit mode compared with active and other transit. This pattern is consistent across all household types in group two.
-
-
-<img width="850" alt="family_transit_performance_dashboard" src="https://github.com/user-attachments/assets/9d7450c5-b773-4055-825e-0c54840814ad" />
-
 Among private auto, active, and other transit modes, the income tier distribution closely mirrors the original 30/50/20 split: ranging from 30.6% to 37.1% for low-income, 45.7% to 51.1% for middle-income, and 16.3% to 18.3% for upper-income.
 
 For public transit in group two, low-income renters significantly increase to 48.6%, becoming the largest share within public transit, though closely followed by middle-income at 43.0%, while upper-income renters drop to just 8.5%. In contrast, upper-income renters in WFH increase to 35.2%, while low-income renters drop to 17.2%.
 
 Overall, middle-income renters stay very stable across all transit modes, while public transit and WFH show the most divergence, with low-income concentrated in public transit and upper-income concentrated in WFH.
+
+
+<img width="850" alt="family_transit_performance_dashboard" src="https://github.com/user-attachments/assets/9d7450c5-b773-4055-825e-0c54840814ad" />
+
+Similarly, the majority of renters in group two commute by private auto, with a sizable portion working from home. Even though very few commute by public transit, it is the primary alternative transit mode compared with active and other transit. This pattern is consistent across all household types in group two.
 
 
 <img width="850" alt="family_transit_performance_dashboard copy" src="https://github.com/user-attachments/assets/e3d96930-d076-41b2-9183-e8940b934ca2" />
@@ -398,7 +398,13 @@ The ROC curve shows an AUC of 0.80, indicating the model performs well in correc
 
 ## Conclusion
 
-Overall, this project confirms that the classic trade-off between housing affordability and commute time flips in Los Angeles County, as stable working renters largely accept the traffic and manage it within a reasonable time frame. Instead, income and household structure are the key drivers of housing strain. This is largely due to Los Angeles being a car-dependent city with limited availability of a reliable alternative public transit system. This trade-off may tell a completely different story in cities like Boston or New York, where better metro systems and higher ridership give renters more flexibility in where they choose to live. Also, it is interesting to note that certain low-income and older renters household has an unexpeted comparatively low rent burden which is likely benefited from housing subsidy program like section 8 and long-term tenureship. With generification (replacement) and rent increase, the low-income household still may likely suffer from rent burden with the subsidy, particularlly the households with specific socialeconomic conditions are likely fall into double burden (30/30) as discussed early. Last, this project only focus on stable working renters, while there are large population work below the minimum income threadhold, particularlly the illegal immigrant and they are more likely to face the classic trade-off. ........................
+Overall, this project confirms that the classic trade-off between housing affordability and commute time flips in Los Angeles County, as stable working renters largely accept the traffic and manage it within a reasonable time frame. Instead, income and household structure are the key factors shaping where renters can afford to live and how much of their income goes toward housing. This is largely due to Los Angeles County being car-dependent with limited availability of a reliable alternative public transit system. This trade-off may tell a completely different story in cities like Boston or New York, which have better public transit systems with higher ridership and are also more pedestrian and bike-friendly, where varied commute options and patterns may show a stronger and more classic association between rent burden and commute time.
+
+As this trade-off flips in Los Angeles County, it is also interesting to note that certain low-income and older renter households show an unexpectedly low rent burden, likely benefiting from housing subsidy programs such as Section 8 or long-term tenureship. However, these benefits come with extremely restricted qualifications, also impacted by Area Median Income (AMI) thresholds and rental market rates. With gentrification and rising rents, low-income households may still face significant rent burden even with subsidies, as renters are still required to pay the difference between the subsidy and the actual rent, particularly those with specific socioeconomic conditions that are likely to fall into the dual-burden (30/30) threshold, as discussed earlier. Meanwhile, this project only focuses on stable working renters, while a large population, particularly undocumented immigrants, works below the minimum income threshold and is likely to experience this trade-off at its worst.
+
+Having lived in Los Angeles for a decade, I have truly witnessed the ongoing rent increases over the years. For renters who wish to maintain a reasonable commute, rent burden becomes an inevitable consequence. While Los Angeles has been improving its public transit system, its polycentric urban structure, with job centers spread across the county rather than concentrated in one hub, makes it unrealistic to fully replace car dependency with public transit alone. Therefore, rent control and housing subsidy programs remain critical tools for easing the financial pressure on low-income renters in Los Angeles County.
+
+
 
 
 
