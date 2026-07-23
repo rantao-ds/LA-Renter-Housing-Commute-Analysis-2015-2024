@@ -45,7 +45,7 @@ The `person_id` variable uniquely identifies each person by combining the ACS ye
 
 ***type_hrwrk*** 
 
-The `type_hrwrk` variable categorizes hours worked per week into `part_time` (20–34 hours/week), `full_time` (35–40 hours/week), or `over_time` (more than 40 hours/week) among working renters.
+The `type_hrwrk` variable categorizes hours worked per week into `part_time` (20–34 hours/week), `full_time` (35–40 hours/week), or `over_time` (more than 40 hours/week). Workers reporting fewer than 20 hours per week were excluded based on the stable worker criteria.
 
 ***wfh***
 
@@ -54,11 +54,12 @@ The `wfh` variable identifies whether a renter works from home based on commutin
 
 ***transit_group***
 
-The `transit_group` variable categorizes transit mode (`TRANWORK`) into `private_auto` ("auto, truck, or van", "motorcycle"), `public_transit` ("bus", "bus or trolley bus", "bus or streetcar", "light rail, streetcar, or trolley", "subway or elevated", "long-distance or commuter train", "ferryboat"), `active_transit` ("bicycle", "walked only"), `other_transit` ("taxicab or ride-hailing services", "other"), and `wfh` ("worked at home").
+The `transit_group` variable recategorizes `TRANWORK` based on ACS/IPUMS transportation mode classifications into `private_auto` ("auto, truck, or van", "motorcycle"), `public_transit` ("bus", "bus or trolley bus", "bus or streetcar", "light rail, streetcar, or trolley", "subway or elevated", "long-distance or commuter train", "ferryboat"), `active_transit` ("bicycle", "walked only"), `other_transit` ("taxicab or ride-hailing services", "other"), and `wfh` ("worked at home").
+
 
 ***race_ethnicity***
 
-The `race_ethnicity` variable combines `RACE` and `HISPAN` into six categories: `hispanic` (anyone identified as Hispanic, regardless of race), `nh_white` (non-Hispanic White), `nh_black` (non-Hispanic Black or African American), `nh_asian` (non-Hispanic Chinese, Japanese, or other Asian/Pacific Islander), `nh_native` (non-Hispanic American Indian or Alaska Native), and `nh_other` (non-Hispanic Other, or non-Hispanic with two or more major races).
+The `race_ethnicity` variable combines `RACE` and `HISPAN` responses into six analytical categories: `hispanic` (anyone identified as Hispanic, regardless of race), `nh_white` (non-Hispanic White), `nh_black` (non-Hispanic Black or African American), `nh_asian` (non-Hispanic Chinese, Japanese, or other Asian/Pacific Islander), `nh_native` (non-Hispanic American Indian or Alaska Native), and `nh_other` (non-Hispanic Other, or non-Hispanic with two or more major races).
 
 
 ***hh_group***
@@ -79,7 +80,7 @@ The `family_size` variable counts only the household members who share a family 
 
 ***n_workers (family household)*** & ***family_workers (mixed household)***
 
-The `n_workers` and `family_workers` variables both identify the number of family members (including the head) who are stable workers in a household. In mixed households, `family_workers` counts only the stable working household members who share a family relationship with the head. Stable working roommates are not included.
+The `n_workers` and `family_workers` variables both identify the number of family members (including the head) who meet the study's stable worker criteria. In mixed households, `family_workers` counts only the stable working household members who share a family relationship with the head. Stable working roommates are not included.
 
 
 ***roommate_workers (mixed household)***
@@ -109,17 +110,36 @@ The `worker_type` variable categorizes the number of family workers (`n_workers`
 
 The `rent_burden` variable represents the percentage of income spent on housing rent, calculated individually for each household as follows:
 
-Single Renter Household: `rent_burden` = (`RENT` * 12) / `HHINCOME` * 100  
+- **Single Renter Household:**  
 
-Roommate Renter Household : `rent_burden` = ((`RENT` * 12) / `n_hh`) / `INCTOT` * 100
-> **Note:** For roommate-based calculations, rent is assumed to be equally shared among household members.
+  `rent_burden` = (`RENT` * 12) / `HHINCOME` * 100  
 
-Family Renter Household: `rent_burden` = (`RENT` * 12) / `HHINCOME` * 100
 
-Mixed Renter Household (family - only): `rent_burden` = (`RENT` * 12 * `family_size`/`n_hh`) / `FTOTINC` * 100
-> **Note:** The household rent is allocated to family members based on their share of total household members, then divided by family total income.
+- **Roommate Renter Household:**
 
-Mixed Renter Household (roommate - only):  `rent_burden` = ((`RENT` * 12) / `n_hh`) / `INCTOT` * 100
+  `rent_burden` = ((`RENT` * 12) / `n_hh`) / `INCTOT` * 100
+  
+  > **Note:** For roommate-based calculations, rent is assumed to be equally shared among household members.
+
+
+- **Family Renter Household:**
+  
+  `rent_burden` = (`RENT` * 12) / `HHINCOME` * 100
+
+
+- **Mixed Renter Household (family-only):**
+  
+  `rent_burden` = (`RENT` * 12 * `family_size`/`n_hh`) / `FTOTINC` * 100
+
+  > **Note:** For family members living in mixed households, household rent is allocated based on the family's share of total household members (`family_size`/`n_hh`).
+
+
+- **Mixed Renter Household (roommate-only):**
+  
+  `rent_burden` = ((`RENT` * 12) / `n_hh`) / `INCTOT` * 100
+
+  > **Note:** For roommate-based calculations, rent is assumed to be equally shared among household members.
+
 
 
 ***range_burden***
