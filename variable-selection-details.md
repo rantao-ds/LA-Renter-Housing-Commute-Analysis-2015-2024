@@ -3,14 +3,14 @@
 #### 1. Survey Identifiers and Weights
 * `YEAR` / `MULTYEAR` / `SAMPLE`: Survey year and pooled sample identifiers
 * `SERIAL` / `PERNUM`: Household and individual person identifiers
-* `HHWT` / `PERWT`: Household and personal survey weights (used for population representativeness)
+* `HHWT` / `PERWT`: Household and personal survey weights used for population-level estimates and weighted analysis
 * `CPI99`: Price index factor used to adjust historical incomes for inflation
 
 #### 2. Geography & Housing Unit Metrics
 * `PUMA`: Public Use Microdata Area geographic boundaries
 * `OWNERSHIP` / `OWNERSHIPD`: Homeownership status and detailed codes
 * `RENT`: Monthly gross rent amount
-* `UNITSSTR`: Building structure type (e.g., single-family vs. multi-family building)
+* `UNITSSTR`: Housing unit structure type (e.g., single-family vs. multi-family structure)
 * `BEDROOMS`: Number of bedrooms in the housing unit
 * `VEHICLES`: Number of vehicles available in the household
 
@@ -45,11 +45,11 @@ The `person_id` variable uniquely identifies each person by combining the ACS ye
 
 ***type_hrwrk*** 
 
-The `type_hrwrk` variable categorizes hours worked per week into `part_time` (20–34 hours/week), `full_time` (35–40 hours/week), or `over_time` (more than 40 hours/week).
+The `type_hrwrk` variable categorizes hours worked per week into `part_time` (20–34 hours/week), `full_time` (35–40 hours/week), or `over_time` (more than 40 hours/week) among working renters.
 
 ***wfh***
 
-The `wfh` variable identifies whether the work is remote.
+The `wfh` variable identifies whether a renter works from home based on commuting status.
 
 
 ***transit_group***
@@ -71,7 +71,8 @@ The `hh_group` variable categorizes households into the four groups mentioned ea
 The `n_hh` variable identifies the number of household members in a multi-person household (including the head), regardless of their relationship with the head. 
 
 In family and roommate households, `n_hh` identifies the total number of family or roommate members (including the head). 
-In mixed households, `n_hh` identifies the total number of both family and roommate members (including the head).
+
+In mixed households, `n_hh` identifies the total number of household members included in the analytical group.
 
 The `family_size` variable counts only the household members who share a family relationship with the head in mixed households. Roommates are not included.
 
@@ -93,7 +94,7 @@ The `num_dependent_children` variable identifies the number of family members un
 
 ***FTOTINC (mixed household)***
 
-The `FTOTINC` (Family Total Income) variable represents the aggregated income of all family-related members living in a mixed household. It sums the individual incomes (`INCTOT`) of all related family members (including the head), regardless of whether they meet the study's specific criteria for a stable worker, while excluding the income of roommates.
+The `FTOTINC` (Family Total Income) variable represents the aggregated income of all family-related members living in a mixed household. It sums the individual incomes (`INCTOT`) of all related family members (including the head), regardless of employment status, while excluding roommate income.
 
 > **Note:** For mixed renter households in group two, `FTOTINC` is used as the household income measure and relabeled as `HHINCOME` for consistency with family households.
 
@@ -101,7 +102,7 @@ The `FTOTINC` (Family Total Income) variable represents the aggregated income of
 
 ***worker_type (family & mixed household)***
 
-The `worker_type` variable categorizes the number of `n_workers` in family household  and `family_workers` in mixed household into `single_earner` and `multiple_earners`.
+The `worker_type` variable categorizes the number of family workers (`n_workers` in family household  and `family_workers` in mixed household) into `single_earner` and `multiple_earners`.
 
 
 ***rent_burden***
@@ -111,20 +112,22 @@ The `rent_burden` variable represents the percentage of income spent on housing 
 Single Renter Household: `rent_burden` = (`RENT` * 12) / `HHINCOME` * 100  
 
 Roommate Renter Household : `rent_burden` = ((`RENT` * 12) / `n_hh`) / `INCTOT` * 100
+> **Note:** For roommate-based calculations, rent is assumed to be equally shared among household members.
 
 Family Renter Household: `rent_burden` = (`RENT` * 12) / `HHINCOME` * 100
 
 Mixed Renter Household (family - only): `rent_burden` = (`RENT` * 12 * `family_size`/`n_hh`) / `FTOTINC` * 100
+> **Note:** The household rent is allocated to family members based on their share of total household members, then divided by family total income.
 
 Mixed Renter Household (roommate - only):  `rent_burden` = ((`RENT` * 12) / `n_hh`) / `INCTOT` * 100
 
 
 ***range_burden***
 
-The `range_burden` variable categorizes the percentage of `rent_burden` into `affordable` (30% or less), `burdened` (30–50%), `severely_burdened` (50–70%), and `extreme` (more than 70% but less than 100% ). 
+The `range_burden` variable categorizes the percentage of `rent_burden` into `affordable` (30% or less), `burdened` (30–50%), `severely_burdened` (50–70%), and `extreme` (70% or more but less than 100%). 
 
 
 ***income_tier***
 
-The `income_tier` variable categorizes income into `low_income` (bottom 30th percentile), `middle_income` (30th–80th percentile), and `upper_income` (80th–100th percentile), based on quantiles calculated separately by survey year within each household category. Individual-level groups use individual income, while household-level groups use household income.
+The `income_tier` variable categorizes income into `low_income` (bottom 30th percentile), `middle_income` (30th–80th percentile), and `upper_income` (80th–100th percentile), with quantiles calculated separately for each ACS 5-year sample period and analytical household category. Individual-level groups use individual income, while household-level groups use household income.
 
