@@ -8,7 +8,15 @@ For workers with less flexible schedules, this trade-off can be even more challe
 
 ## Data
 
-Data were retrieved from IPUMS USA using the ACS 5-Year datasets for **2015–2019** and **2020–2024**, restricted to **Los Angeles County, California**. For detailed information on variable selection and additional variables, please refer to the [Variable Selection Details](variable-selection-details.md) page.
+The data were retrieved from IPUMS USA using the ACS 5-Year datasets for **2015–2019** and **2020–2024**, restricted to **Los Angeles County, California**. 
+
+**Data Source Citation:**
+Steven Ruggles, Sarah Flood, Matthew Sobek, Daniel Backman, Grace Cooper, Julia A. Rivera Drew,
+Stephanie Richards, Renae Rodgers, Jonathan Schroeder, and Kari C.W. Williams. IPUMS USA: Version 16.0
+[dataset]. Minneapolis, MN: IPUMS, 2025. https://doi.org/10.18128/D010.V16.0
+
+Raw ACS/IPUMS data files are not included in this repository and can be obtained by registering through IPUMS USA and downloading the corresponding ACS 5-year samples. For detailed information on variable selection and additional variables, please refer to the [Variable Selection Details](variable-selection-details.md) page.
+
 
 ### Renter Household & Unit Structure Criteria:
 
