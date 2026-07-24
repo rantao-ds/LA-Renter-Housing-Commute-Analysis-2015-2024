@@ -161,4 +161,38 @@ saveRDS(mh_mx, "data/mh_mx_raw.rds")
 saveRDS(mh_raw, "data/mh_cleaned.rds")
 
 
+#California minimum wage from 2015 - 2019 and 2020 - 2024
+##2015 - 2019 
+2015: $9.00/hour 
+part-time = 9 * 20 * 52 = 9,360
+full-time = 9 * 35 * 52 = 16,380
+2016: $10.00/hour
+part-time = 10 * 20 * 52 = 10,400
+full-time = 10 * 35 * 52 = 18,200
+2017: $10.00/hour
+part-time = 10 * 20 * 52 = 10,400
+full-time = 10 * 35 * 52 = 18,200
+2018: $11.00/hour
+part-time = 11 * 20 * 52 = 11,440
+full-time = 11 * 35 * 52 = 20,020
+2019: $12.00/hour
+part-time = 12 * 20 * 52 = 12,480 
+full-time = 12 * 35 * 52 = 21,840
+
+##2020 - 2024
+2020: $12.00/hour
+part-time = 12 * 20 * 52 = 12,480 
+full-time = 12 * 35 * 52 = 21,840
+2021: $13.00/hour
+part-time = 13 * 20 * 52 = 13,520
+full-time = 13 * 35 * 52 = 23,660
+2022: $14.00/hour
+part-time = 14 * 20 * 52 = 14,560
+full-time = 14 * 35 * 52 = 25,480
+2023: $15.50/hour
+part-time = 15.5 * 20 * 52 = 16,120
+full-time = 15.5 * 35 * 52 = 28,210
+2024: $16.00/hour
+part-time = 16 * 20 * 52 = 16,640
+full-time = 16 * 35 * 52 = 29,120
 
