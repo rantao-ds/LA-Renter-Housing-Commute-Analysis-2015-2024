@@ -41,6 +41,7 @@ sh <- sh %>%
 table(sh$wfh)
 table(sh$type_hrwrk,sh$wfh)
 
+Part 2: income & rent burden
 
 # seting the minimum wage threadhold and filtering out below the minimum wage
 sh <- sh %>%
@@ -81,7 +82,6 @@ sh <- sh %>%
 
 # checking the summary of HHINCOME
 summary(sh$HHINCOME)
-
 
 # checking summary of RENT by each year 
 sh %>%
@@ -159,14 +159,10 @@ sh %>%
 sh <- sh %>%
  select(-SAMPLE, -STATEFIP, -COUNTYFIP, -OWNERSHP, -OWNERSHPD, -EMPSTAT, -EMPSTATD)
 
-drop_sh <- c("n_hh", "hh_type", "CPI99", "income_check", "income_check2","min_wage_threshold","below_minwage" )
-
-sh <- sh %>%
-select(-all_of(drop_sh))
 
 saveRDS(sh, "data/sh_final_cleaned.rds")
 
-Part 2 : relabeling characters 
+Part 3 : relabeling characters 
 
 #vehicle
 sh <- sh %>%
