@@ -8,13 +8,13 @@ For workers with less flexible schedules, this trade-off can be even more challe
 
 ## Data
 
-The data retrieved from IPUMS USA, with samples selected from the ACS 5-Year datasets for **2015–2019** and **2020–2024**, restricted to **Los Angeles County, California**. For detailed information on variable selection and additional variables, please refer to the [Variable Selection Details](variable-selection-details.md) page.
+Data were retrieved from IPUMS USA using the ACS 5-Year datasets for **2015–2019** and **2020–2024**, restricted to **Los Angeles County, California**. For detailed information on variable selection and additional variables, please refer to the [Variable Selection Details](variable-selection-details.md) page.
 
 ### Renter Household & Unit Structure Criteria:
 
-* The household tenure is renter-occupied with cash rent.
+* The household tenure must be renter-occupied with cash rent.
 * The housing structure must be a residential unit: a 1-family house (detached or attached) or a multi-family building with 2 or more units.
-* For multi-person households, only households with 2–5 persons were retained, as they represent the majority of the selected ACS 5-year samples (82.4% in ACS 2019 and 83.3% in ACS 2024).
+* For multi-person households, only households with 2–5 persons were retained, representing the majority of selected ACS samples (82.4% in ACS 2019 and 83.3% in ACS 2024).
 
 ### Stable Worker Definition
 
@@ -23,7 +23,9 @@ A stable worker is defined as a person who meets all of the following criteria:
 1. Aged 24–64,
 2. Currently employed and at work,
 3. Usually working 20–80 hours per week, and
-4. Earning annual wages at or above the annualized California minimum wage for the corresponding year ([U.S. DOL Minimum Wage History](https://www.dol.gov/agencies/whd/state/minimum-wage/history)). 
+4. Earning annual income greater than or equal to the California minimum wage threshold for the corresponding ACS survey year, calculated using the published hourly minimum wage and the minimum weekly hour benchmark for each working-hour category.
+   > **Note:** The minimum income threshold was calculated separately for each ACS survey year using California's published hourly minimum wage rate ([U.S. DOL Minimum Wage History](https://www.dol.gov/agencies/whd/state/minimum-wage/history)). The annual threshold varies by working-hour category, using 20 hours/week as the benchmark for part-time workers and 35 hours/week as the benchmark for both full-time and overtime workers.
+
 
 ### Renter Household Classifications
 
@@ -37,21 +39,25 @@ A multi-person household in which the head is a stable worker and all other hous
 A multi-person household in which the head is a stable worker and all other household members share a family-based relationship. Following data wrangling, 85,848 observations remain for analysis. 
 
 **Mixed Renter Household** 
-A multi-person household in which the head is a stable worker, living with family members who share a family-based relationship with the head (not required to be workers), and at least one non-family roommate who is also a stable worker. Following data wrangling, 3,454 observations remain for analysis.
+A multi-person household in which the head is a stable worker, living with both family members who share a family-based relationship with the head (not required to be workers) and at least one non-family roommate who is also a stable worker. Following data wrangling, 3,454 observations remain for analysis.
 
 
 ### Analytical Framework & Groupings
 
 To facilitate exploratory data analysis (EDA) and modeling, the four original household types were combined into three distinct analytical groups.
 
+  > **Note:** Mixed renter households contribute observations to both analytical groups depending on the individual's household role: family members are included in Group Two, while stable working roommates are included in Group One.
+
+
 **Group_One**
 
-Group One represents an individual-level analysis focusing on nonfamily living arrangements. This group combines individuals from single renter households, roommate renter households, and roommates living in mixed renter households. Following the data wrangling and merging process, Group One retains a sample of 32,604 observations for descriptive and predictive analysis.
+Group One represents an individual-level analytical framework focusing on nonfamily living arrangements. This group combines individuals from single renter households, roommate renter households, and roommates living in mixed renter households. Following the data wrangling and merging process, Group One retains a sample of 32,604 observations for descriptive and predictive analysis.
 
 
 **Group_Two**
 
-Group Two represents a household-level analysis focusing on family living arrangements. This group combines individuals from family renter households and families living in mixed renter households. Following the data wrangling and merging process, Group Two retains a sample of 87,901 observations for descriptive and predictive analysis.
+Group Two represents a household-level analytical framework focusing on family living arrangements. This group combines individuals from family renter households and families living in mixed renter households. Following the data wrangling and merging process, Group Two retains a sample of 87,901 observations for descriptive and predictive analysis.
+
 
 
 **Group_Three**
