@@ -159,7 +159,7 @@ sh %>%
 sh <- sh %>%
  select(-SAMPLE, -STATEFIP, -COUNTYFIP, -OWNERSHP, -OWNERSHPD, -EMPSTAT, -EMPSTATD)
 
-
+# saving the cleaned dataset
 saveRDS(sh, "data/sh_final_cleaned.rds")
 
 Part 3 : relabeling characters 
@@ -331,4 +331,5 @@ sh <- sh %>%
   sh <- sh %>% 
      mutate(hh_group = "single")
 
+# saving the dataset
 saveRDS(sh, "data/sh_eda_ready.rds")
