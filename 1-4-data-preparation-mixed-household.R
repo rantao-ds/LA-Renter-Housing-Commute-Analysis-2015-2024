@@ -83,7 +83,7 @@ table(mh_mx$type_hrwrk,mh_mx$wfh)
 mh_mx <- mh_mx %>%
  select(-SAMPLE, -STATEFIP, -COUNTYFIP, -OWNERSHP, -OWNERSHPD, -EMPSTAT, -EMPSTATD)
 
-# saving the initial clean dataset 
+# saving the initial cleaned dataset 
 saveRDS(mh_mx, "data/mh_mx_initial_clean.rds")
 
 Part 2: income and rent burden
@@ -227,7 +227,7 @@ mh_mx %>%
   arrange(lv_status, income_tier)
 
 
-# saving the dataset 
+# saving the cleaned dataset 
 saveRDS(mh_mx, "data/mh_mx_final_cleaned.rds")
 
 
