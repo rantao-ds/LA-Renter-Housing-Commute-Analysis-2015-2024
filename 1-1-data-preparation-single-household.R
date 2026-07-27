@@ -1,6 +1,6 @@
 Part 1 : initial cleaning 
 
-# filtering the target sampling characters and verifing the filtering
+# applying the target sample criteria
 sh <- sh %>%
 filter(OWNERSHP == 2 & OWNERSHPD == 22) %>%
 filter(EMPSTAT == 1 & EMPSTATD %in% c(10, 14)) %>%
