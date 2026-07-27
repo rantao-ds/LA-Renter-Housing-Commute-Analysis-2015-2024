@@ -1,5 +1,5 @@
 Part 1: initial cleaning
-# double checking composition of family structure
+# double checking composition of household structure
 mh_fm <- mh_fm %>%
 group_by(YEAR, SERIAL) %>%
 mutate(
@@ -45,7 +45,7 @@ mh_fm <- mh_fm %>%
 mh_fm <- mh_fm %>%
  select(-SAMPLE, -STATEFIP, -COUNTYFIP, -OWNERSHP, -OWNERSHPD, -EMPSTAT, -EMPSTATD)
 
-# saving the initial clean dataset 
+# saving the initial cleaned dataset 
 saveRDS(mh_fm, "data/mh_fm_initial_clean.rds")
 
 Part 2: income and rent burden
@@ -131,7 +131,7 @@ mh_fm %>%
      print(n=Inf, width=Inf)
 
 
-# saving the dataset 
+# saving the cleaned dataset 
 saveRDS(mh_fm, "data/mh_fm_final_cleaned.rds")
 
 Part 3: relabeling character 
