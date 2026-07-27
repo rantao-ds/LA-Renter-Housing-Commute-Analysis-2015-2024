@@ -59,10 +59,7 @@ mh_raw <- mh_raw %>%
 mh_raw <- mh_raw %>%
   group_by(YEAR, SERIAL) %>%
   mutate(
-    # TRUE if the house has ANY minor child, stepchild, grandchild, or foster child
     has_dependent_children = any(RELATED %in% c(301, 302, 303, 401, 901, 1242) & AGE < 18),
-    
-    # Optional: Count EXACTLY how many kids there are to measure financial burden
     num_dependent_children = sum(RELATED %in% c(301, 302, 303, 401, 901, 1242) & AGE < 18)
   ) %>%
   ungroup()
@@ -72,7 +69,6 @@ mh_raw <- mh_raw %>%
 mh_raw <- mh_raw %>%
   group_by(YEAR, SERIAL) %>%
   mutate(
-    # Flag if the household contains a spouse or unmarried partner
     has_partner = any(RELATED %in% c(201, 1114))
   ) %>%
   ungroup()
@@ -109,7 +105,7 @@ fm_serial <- mh_raw %>%
   filter(
     any(RELATED == 101) & 
     any(RELATED %in% family_codes) & 
-    !any(RELATED %in% roommate_codes) # Strictly FORBID roommates
+    !any(RELATED %in% roommate_codes) 
   ) %>%
   distinct(YEAR, SERIAL) %>%
   ungroup()
@@ -123,7 +119,7 @@ rm_serial <- mh_raw %>%
   filter(
     any(RELATED == 101) & 
     any(RELATED %in% roommate_codes) & 
-    !any(RELATED %in% family_codes) # Strictly FORBID family members
+    !any(RELATED %in% family_codes) 
   ) %>%
   distinct(YEAR, SERIAL) %>%
   ungroup()
@@ -137,7 +133,7 @@ mx_serial <- mh_raw %>%
   filter(
     any(RELATED == 101) & 
     any(RELATED %in% family_codes) & 
-    any(RELATED %in% roommate_codes) # Explicitly REQUIRE both
+    any(RELATED %in% roommate_codes) 
   ) %>%
   distinct(YEAR, SERIAL) %>%
   ungroup()
