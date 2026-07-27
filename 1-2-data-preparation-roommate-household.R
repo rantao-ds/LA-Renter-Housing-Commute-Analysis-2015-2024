@@ -1,5 +1,5 @@
 Part 1 : initial cleaning 
-# double checking composition of roommate structure
+# double checking composition of household structure
 mh_rm <- mh_rm %>%
 group_by(YEAR, SERIAL) %>%
 mutate(
@@ -12,7 +12,7 @@ table(mh_rm$has_relatives)
 
 table(mh_rm$has_head,mh_rm$has_roommate)
 
-# filtering the target sampling characters and verifing the filtering
+# applying the target sample criteria
 mh_rm <- mh_rm %>%
 filter(OWNERSHP == 2 & OWNERSHPD == 22) %>%
 filter(EMPSTAT == 1 & EMPSTATD %in% c(10, 14)) %>%
@@ -51,6 +51,7 @@ table(mh_rm$type_hrwrk,mh_rm$wfh)
 mh_rm <- mh_rm %>%
  select(-SAMPLE, -STATEFIP, -COUNTYFIP, -OWNERSHP, -OWNERSHPD, -EMPSTAT, -EMPSTATD)
 
+# saving the initial cleaned dataset 
 saveRDS(mh_rm, "data/mh_rm_initial_clean.rds")
 
 Part 2 : income & rent burden
@@ -152,6 +153,7 @@ mh_rm <- mh_rm %>%
   )) %>%
   ungroup()
 
+# saving the cleaned dataset 
 saveRDS(mh_rm, "data/mh_rm_final_cleaned.rds")
 
 
@@ -324,4 +326,5 @@ mutate(
 mh_rm <- mh_rm %>% 
      mutate(hh_group = "roommate")
 
+# saving the dataset
 saveRDS(mh_rm, "data/mh_rm_eda_ready_final.rds")
