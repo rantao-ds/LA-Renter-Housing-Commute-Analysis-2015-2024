@@ -11,7 +11,7 @@ table(mh_fm$has_roommate)
 table(mh_fm$has_head,mh_fm$has_relatives)
 
 
-# filtering the target sampling characters and verifing the filtering
+# applying the target sample criteria
 mh_fm <- mh_fm %>%
 filter(OWNERSHP == 2 & OWNERSHPD == 22) %>%
 filter(EMPSTAT == 1 & EMPSTATD %in% c(10, 14)) %>%
