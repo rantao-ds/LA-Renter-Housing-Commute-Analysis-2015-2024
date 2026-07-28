@@ -244,7 +244,6 @@ p_overall_burden <- ggplot(overall_rent_burden,
     legend.title = element_text(face = "bold", size = 12), 
     legend.text = element_text(size = 11),              
     legend.key.size = unit(1.1, "lines"),                 
-    # Slight negative margin to hug it perfectly under the donut
     legend.margin = margin(t = -10, r = 0, b = 10, l = 0) 
   )
 
@@ -598,7 +597,7 @@ plot1 <- ggplot(plot_data_hh, aes(x = value, y = hh_group, fill = metric)) +
   scale_x_continuous(limits = c(0, 45)) + 
   theme_minimal() +
   labs(
-    title = "By Household Type", # Subplot title
+    title = "By Household Type", 
     x = "Value (Minutes or %)",
     y = NULL,
     fill = "Metric"
@@ -614,19 +613,16 @@ plot1 <- ggplot(plot_data_hh, aes(x = value, y = hh_group, fill = metric)) +
 #### plot 2
 plot2 <- ggplot(plot_data_transit, aes(x = value, y = transit_group, fill = metric)) +
   geom_col(width = 0.75, position = position_dodge(width = 0.75)) +
-  
-  # Adds exact formatted labels (e.g., '49.6 min')
   geom_text(aes(label = label_text),
             position = position_dodge(width = 0.75),
             hjust = -0.15,
             fontface = "bold",
             size = 3.5) +
-  
   scale_fill_manual(values = metric_colors) +
   scale_x_continuous(limits = c(0, 60)) + 
   theme_minimal() +
   labs(
-    title = "By Transit Mode", # Subplot title
+    title = "By Transit Mode", 
     x = "Value (Minutes or %)",
     y = NULL,
     fill = "Metric"
