@@ -18,6 +18,8 @@ group_one_eda %>%
   mutate(pct = n/sum(n)*100) %>%
   arrange(income_tier_g1)
 
+# saving the dataset 
+saveRDS(group_one_eda, "data/group_one_eda_ready.rds")
 
 Part 2: group one eda
 
