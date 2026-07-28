@@ -1,12 +1,12 @@
 Part 1: pre-eda adjustments
 
-# merging the datasets - full dataset with all the type of household
+# merging datasets into a full dataset containing all household types
 full_final <- bind_rows(mh_rm, mh_fm, mh_mx,sh)
 
 table(full_final$hh_group)
 
 
-# creating a variable to label four age groups
+# creating age group categories
 full_final <- full_final %>%
 mutate(
     age_group = cut(
@@ -20,7 +20,7 @@ mutate(
 ## verify 
 table(full_final$age_group)
 
-# creating a variable to combine hispanic and race with new labeling
+# creating race and ethnicity categories by combining Hispanic origin and race
 full_final <- full_final %>%
   mutate(
     race_ethnicity = case_when(
@@ -83,7 +83,7 @@ saveRDS(group_three_eda, "data/group_three_eda_ready.rds")
 Part 2: eda - overview
 
 # chart 1 (Distribution of Household Types)
-## caclulating 
+## calculating 
 prop_full_household <- full_final %>%
  count(hh_group, wt = perwt) %>%           
      mutate(prop = n / sum(n))
@@ -165,7 +165,7 @@ library(ggplot2)
 library(scales)
 library(patchwork)
 
-#### prepartion for both plot1 & plot2
+#### preparing for both plot1 & plot2
 overall_rent_burden <- overall_rent_burden %>%
   arrange(desc(range_burden)) %>%
   mutate(
