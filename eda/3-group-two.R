@@ -52,15 +52,13 @@ prop_clean_g2 <- pct_fm_mx %>%
   mutate(
     cumsum_prop = cumsum(prop),
     label_y = cumsum_prop - (prop / 2),
-    
-    # Slices < 5% (Mixed 2.3%) go outside (x = 2.65)
     label_x = ifelse(prop < 0.05, 2.65, 2.0),
     label_color = ifelse(prop < 0.05, "gray30", "white")
   )
 
-prop_inside_g2  <- prop_clean_g2 %>% filter(prop >= 0.05) # Family (97.7%)
+prop_inside_g2  <- prop_clean_g2 %>% filter(prop >= 0.05) 
 
-prop_outside_g2 <- prop_clean_g2 %>% filter(prop < 0.05)  # Mixed (2.3%)
+prop_outside_g2 <- prop_clean_g2 %>% filter(prop < 0.05) 
 
 prop_outside_g2 <- prop_outside_g2 %>%
   mutate(
@@ -103,11 +101,10 @@ plot1 <- ggplot(prop_clean_g2, aes(x = 2, y = prop, fill = hh_group)) +
     aes(x = 2.1, xend = 2.5, y = label_y, yend = label_y),
     color = "gray50",
     linewidth = 0.8,
-    inherit.aes = FALSE # Prevent inheriting the main fill aesthetics
+    inherit.aes = FALSE 
   ) +
   geom_text(
     data = prop_outside_g2,
-    # Kept x at 2.65
     aes(x = 2.65, y = label_y, label = scales::percent(prop, accuracy = 0.1)),
     color = "gray30", 
     fontface = "bold", 
@@ -142,7 +139,7 @@ p_rent_burden_by_hh_g2 <- ggplot(plot_data_rb_g2, aes(x = range_burden, y = prop
   geom_text(
     aes(label = percent(prop, accuracy = 0.1)), 
     position = position_dodge(width = 0.8),
-    vjust = -0.5, # Position slightly above the bar
+    vjust = -0.5, 
     fontface = "bold",
     size = 3.0
   ) +
@@ -791,7 +788,7 @@ plot2 <- ggplot(plot_data_b, aes(x = hh_group, y = prop, fill = transit_group)) 
     axis.text.y = element_text(color = "gray50"),
     panel.grid.minor = element_blank(),
     panel.grid.major.x = element_blank(),
-    legend.position = "none" # Hidden completely to avoid duplicates
+    legend.position = "none"
   )
 
 ### merging plot1 & plot2 side by side
@@ -865,8 +862,8 @@ p_performance_g2 <- ggplot(plot_data_g2_performance, aes(x = value, y = transit_
   scale_x_continuous(limits = c(0, 60)) + 
   scale_fill_manual(
     values = c(
-      "Mean Commute Time (mins)" = "#23cbc3", # Teal
-      "Mean Rent Burden (%)"     = "#ef2326"  # Terracotta/Orange
+      "Mean Commute Time (mins)" = "#23cbc3", 
+      "Mean Rent Burden (%)"     = "#ef2326" 
     )
   ) +
   theme_minimal() +
