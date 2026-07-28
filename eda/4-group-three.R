@@ -217,7 +217,6 @@ ggsave("plots/wfh_dashboard.png",
 # chart 3 (Work-from-Home(WFH) Rent Burden Trends Over 10 Years)
 ## calculating 
 wfh_burden_hh_trends <- group_three_eda %>%
-  # 1. Filter safely
   filter(wfh == TRUE) %>%
   group_by(multyear, hh_group) %>%
   summarise(
