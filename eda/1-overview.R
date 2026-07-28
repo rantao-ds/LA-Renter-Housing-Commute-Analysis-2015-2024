@@ -82,7 +82,7 @@ saveRDS(group_three_eda, "data/group_three_eda_ready.rds")
 
 Part 2: eda - overview
 
-# chart 1
+# chart 1 (Distribution of Household Types)
 ## caclulating 
 prop_full_household <- full_final %>%
  count(hh_group, wt = perwt) %>%           
@@ -143,7 +143,7 @@ ggsave("plots/overall_prop_type_household.png",
        dpi = 300, bg = "white")
 
 
-# chart 2
+# chart 2 (Overall Housing Affordability & Living Arrangement Distribution)
 ## calculating
 overall_rent_burden <- full_final %>%
      group_by(range_burden) %>%
@@ -314,7 +314,7 @@ ggsave("plots/housing_burden_dashboard.png",
        bg = "white")
 
 
-# chart 3
+# chart 3 (Monthly Rent by Household Type (boxplot))
 
 library(ggplot2)
 library(scales)
@@ -361,8 +361,8 @@ full_final %>%
        dpi = 300,
        bg = "white")
 
-# chart 4
-## caculating 
+# chart 4 (Overall Transit Distribution and Commuter Profile by Household Type)
+## calculating 
 prop_full_trans <- full_final %>%
   count(transit_group, wt = perwt) %>%           
   mutate(prop = n / sum(n))
@@ -517,7 +517,7 @@ ggsave("plots/transit_performance_dashboard.png",
        bg = "white")
 
 
-# chart 5
+# chart 5 (Mean Commute Time & Rent Burden Profiles)
 ## calculating
 prop_commute_rent_weighted <- full_final %>%
      filter(wfh == FALSE | wfh == "FALSE") %>%     
