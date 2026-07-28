@@ -48,7 +48,6 @@ prop_outside <- prop_outside %>%
 
 ### plot
 p_independent_share <- ggplot(prop_clean, aes(x = 2, y = prop, fill = hh_group)) +
-  # Draw the donut
   geom_bar(stat = "identity", color = "white", linewidth = 1.5) +
   coord_polar(theta = "y", start = 0) +
     geom_segment(
@@ -56,7 +55,7 @@ p_independent_share <- ggplot(prop_clean, aes(x = 2, y = prop, fill = hh_group))
     aes(x = 2.1, xend = 2.5, y = label_y, yend = label_y),
     color = "gray50",
     linewidth = 0.8,
-    inherit.aes = FALSE # Prevent inheriting the main fill aesthetics
+    inherit.aes = FALSE 
   ) +
   geom_text(
     data = prop_inside,
@@ -90,7 +89,7 @@ p_independent_share <- ggplot(prop_clean, aes(x = 2, y = prop, fill = hh_group))
   ) +
   guides(fill = guide_legend(nrow = 1, title.position = "top", title.hjust = 0.5)) +
   theme(
-    aspect.ratio = 1, # Keeps the donut perfectly round on export
+    aspect.ratio = 1, 
     plot.title = element_text(face = "bold", size = 18, hjust = 0.5, margin = margin(t = 40, b = 2)),
     plot.subtitle = element_text(size = 14, color = "gray30", hjust = 0.5, margin = margin(b = 20)),
     plot.caption = element_text(hjust = 1, size = 9, color = "gray50", margin = margin(t = 10)),
@@ -141,7 +140,6 @@ p_overall_burden_g1 <- ggplot(overall_group1_burden,
   ) +
   geom_segment(
     data = extreme_data_g1,
-    # Starts just inside the outer edge (2.1) and extends outside (2.5)
     aes(x = 2.1, xend = 2.5, y = label_y, yend = label_y),
     color = "gray50",
     linewidth = 0.8,
@@ -179,7 +177,7 @@ p_overall_burden_g1 <- ggplot(overall_group1_burden,
   ) +
   guides(fill = guide_legend(nrow = 2, title.position = "top", title.hjust = 0.5)) +
   theme(
-    aspect.ratio = 1, # Keeps the donut perfectly round on export!
+    aspect.ratio = 1,
     plot.title = element_text(face = "bold", size = 14, hjust = 0.5, margin = margin(t = 10, b = -20)), 
     legend.position = "bottom", 
     legend.title = element_text(face = "bold", size = 12), 
@@ -276,7 +274,7 @@ plot_data_age <- burden_range_age_g1 %>%
   group_by(range_burden) %>%
   mutate(
     cumsum_prop = cumsum(prop),
-    label_y = cumsum_prop - (prop / 2) # Manual mathematical midpoint
+    label_y = cumsum_prop - (prop / 2) 
   ) %>%
   ungroup()
 
@@ -417,7 +415,6 @@ plot_data_transit_inc <- transit_income_g1 %>%
     transit_group = factor(transit_group, 
                            levels = c("private_auto", "public_transit", "active_transit", "other_transit", "wfh"),
                            labels = c("Private Auto", "Public Transit", "Active Transit", "Other", "WFH")),
-    # Format and order the income tiers logically
     income_tier_g1 = factor(income_tier_g1,
                             levels = c("low_income", "middle_income", "upper_income"),
                             labels = c("Low-Income", "Middle-Income", "Upper-Income"))
@@ -798,7 +795,6 @@ plot1 <- ggplot(plot_data_hh, aes(x = value, y = hh_group, fill = metric)) +
     fill = "Metric"
   ) +
   theme(
-    # Pulls the title down closer to the bars!
     plot.title = element_text(face = "bold", size = 14, hjust = 0.5, margin = margin(t = 10, b = 15)),
     axis.text.y = element_text(face = "bold", size = 11, color = "black"),
     axis.text.x = element_text(color = "gray50"),
