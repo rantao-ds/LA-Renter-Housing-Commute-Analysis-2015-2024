@@ -1,5 +1,5 @@
 Part 1: pre-eda dataset adjustments
-# creating a variable to label income-tier by ACS 5-year within the group 
+# creating income-tier categories within each ACS 5-year sample for group one
 group_one_eda <- group_one_eda %>%
   group_by(year) %>%
   mutate(
