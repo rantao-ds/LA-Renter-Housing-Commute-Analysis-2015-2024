@@ -118,7 +118,9 @@ Group One focuses on the trade-off at the individual level. The majority of rent
 
 <img width="850" alt="nonfamily_housing_dashboard" src="https://github.com/user-attachments/assets/e7868352-cac3-4d4b-9d67-535945928cbe" />
 
-Overall, 87.9% of renters in Group One have a rent burden of less than 50%. Among all household types, space-sharing households (roommate & mixed) have a comparatively higher share of renters with less than 50% rent burden and a lower share with more than 50% rent burden than non-sharing households (single).
+Overall, 87.9% of renters in Group One have a rent burden of less than 50%. Among all household types, space-sharing households (roommate & mixed) have a comparatively higher share of renters with less than 50% rent burden and a lower share with more than 50% rent burden than non-sharing households (single). 
+
+Additionally, the weighted mean rent burden remained nearly unchanged between the 2019 and 2024 ACS 5-year samples, increasing slightly from 29.4% to 30.0%. This stability was consistent across household types: mixed households increased from 17.7% to 18.1%, roommate households from 24.0% to 24.1%, while single households decreased slightly from 33.2% to 32.9%.
 
 
 <img width="850" alt="rent_burden_socioeconomic_profiles" src="https://github.com/user-attachments/assets/98c7f329-0f0c-43a9-bcb5-6b9e9ae8e3ec" />
@@ -153,6 +155,7 @@ Again, the "privacy tax" contributes to higher rent burden, as mean commute time
 
 Overall, the majority of Group Two renters come from family households (97.7%), with only 2.3% from mixed households. Mixed households have a slightly higher proportion in the affordable category, while family households have higher proportions in the burdened, severely burdened, and extreme categories.
 
+Additionally, the weighted mean rent burden in Group Two decreased from 28.3% in 2019 to 27.4% in 2024. This decline occurred across both household types, falling from 28.4% to 27.5% among family households and from 24.5% to 22.6% among mixed households.
 
 <img width="850" alt="family_rent_burden_socioeconomic_profiles" src="https://github.com/user-attachments/assets/46883e5d-9809-41b1-a18e-20e083b47139" />
 
