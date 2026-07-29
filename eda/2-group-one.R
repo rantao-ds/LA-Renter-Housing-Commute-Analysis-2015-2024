@@ -109,6 +109,20 @@ ggsave("plots/independent_share_pie.png",
        bg = "white")
 
 # chart 2 (Overall Rent Burden Distribution of Nonfamily Households)
+## calculating weighted mean rent burden by ACS 5-year sample and household type (summary only)
+group_one_eda %>%
+  group_by(year) %>%
+  summarise(
+    mean_rent_burden = weighted.mean(rent_burden, perwt, na.rm = TRUE)
+  )
+
+group_one_eda %>%
+  group_by(year, hh_group) %>%
+  summarise(
+    mean_rent_burden = weighted.mean(rent_burden, perwt, na.rm = TRUE),
+    .groups = "drop"
+  )
+
 ## calculating 
 overall_group1_burden <- group_one_eda %>%
 group_by(range_burden) %>%
