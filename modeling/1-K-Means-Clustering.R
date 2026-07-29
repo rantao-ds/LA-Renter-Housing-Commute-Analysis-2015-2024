@@ -1,4 +1,4 @@
-Group 1 
+Group One
 # preparing the dataset for group one clustering
 group1_clustering <- group_one_eda %>%
   filter(wfh == FALSE) %>%
@@ -46,7 +46,7 @@ high_contrast_colors <- c(
   "5" = "#8B5CF6"   
 )
 
-# plot 
+# plotting
 bubble_plot_g1 <- ggplot(plot_sample_g1, aes(x = individual_income, y = rent_burden, color = cluster)) +
   geom_point(aes(size = commute_time), alpha = 0.4) +
   scale_x_log10(
@@ -104,7 +104,7 @@ ggsave("output/nonfamily_renter_bubble_chart_high_legibility.pdf",
        bg = "white")
 
 
-Group 2
+Group Two
 # preparing the dataset for group two clustering                     
 group2_clustering_expanded <- group_two_eda %>%
   filter(wfh == FALSE) %>% 
@@ -165,7 +165,7 @@ high_contrast_colors <- c(
   "6" = "#64748B"   
 )
 
-# plot
+# plotting
 bubble_plot_g2 <- ggplot(plot_sample_g2, aes(x = household_income, y = rent_burden, color = cluster)) +
   geom_point(aes(size = commute_time), alpha = 0.4) +
   scale_x_log10(
