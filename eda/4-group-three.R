@@ -24,7 +24,7 @@ trend_colors <- c(
   "Mixed"    = "#66C2E8"   
 )
 
-### plot
+### plotting
 pop_plot <- ggplot(plot_data, aes(x = multyear, y = wfh_pop, color = hh_group, group = hh_group)) +
   theme_minimal(base_family = "sans") +
   geom_vline(xintercept = 2020, linetype = "dotted", color = "gray50", linewidth = 0.8) +
@@ -190,7 +190,7 @@ plot2 <- ggplot(plot_data_bar, aes(x = year, y = prop, fill = hh_group)) +
     legend.position = "none" 
   )
 
-### merging plot1 & plot2 side by side
+### merging two plots side by side
 final_wfh_dashboard <- plot1 + plot2 + 
   plot_layout(widths = c(1, 1)) + 
   plot_annotation(
@@ -241,7 +241,7 @@ trend_colors <- c(
 )
 
 
-### plot
+### plotting
 trend_plot <- ggplot(plot_data, aes(x = multyear, y = avg_rent_burden, color = hh_group, group = hh_group)) +
   theme_minimal(base_family = "sans") +
   geom_vline(xintercept = 2020, linetype = "dotted", color = "gray50", linewidth = 0.8) +
@@ -459,7 +459,7 @@ plot2 <- ggplot(plot_data_bar, aes(x = hh_group, y = prop, fill = range_burden))
     legend.position = "none" 
   )
 
-### merging plot1 & plot2 side by side 
+### merging two plots side by side 
 final_wfh_burden_dashboard <- plot1 + plot2 + 
   plot_layout(widths = c(1, 1)) + 
   plot_annotation(
