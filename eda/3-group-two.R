@@ -165,7 +165,7 @@ p_rent_burden_by_hh_g2 <- ggplot(plot_data_rb_g2, aes(x = range_burden, y = prop
     legend.position = "none" 
   )
 
-### merging plot1 & plot2 side by side
+### merging two plots side by side
 final_g2_housing_dashboard <- plot1 + p_rent_burden_by_hh_g2 + 
   plot_layout(widths = c(1, 1)) + 
   plot_annotation(
@@ -315,7 +315,7 @@ plot2 <- ggplot(plot_data_income, aes(x = range_burden, y = prop, fill = income_
     legend.text = element_text(size = 9)
   )
 
-### merging plot1 & plot2 side by side 
+### merging both plots side by side 
 final_profile_dashboard <- plot1 + plot2 + 
   plot_layout(widths = c(1, 1)) + 
   plot_annotation(
@@ -375,7 +375,7 @@ race_eth_colors <- c(
   "Other / Multi-racial"     = "#A78BFA",  
   "Native American"          = "#DDD6FE"   
 
-### plot
+### plotting
 single_race_eth_plot_g2 <- ggplot(plot_data_race_eth, aes(x = range_burden, y = prop, fill = race_ethnicity)) +
   geom_col(color = "white", linewidth = 0.6, width = 0.6) +
   geom_text(
@@ -557,7 +557,7 @@ plot1 <- ggplot(family_profile_data, aes(x = range_burden, y = prop, fill = work
     legend.position = "none" 
   )
 
-  ### merging plot1 & plot2 side by side
+  ### merging two plots side by side
   final_profile_dashboard <- (plot1 + plot2) + 
   plot_layout(widths = c(1, 1), guides = "collect") & 
   theme(
@@ -622,7 +622,7 @@ income_colors <- c(
   "Upper-Income"  = "#598F6C"   
 )
 
-### plot
+### plotting
 transit_income_plot_g2 <- ggplot(plot_data_transit_inc, aes(x = transit_group, y = prop, fill = income_tier_g2)) +
   geom_col(color = "white", linewidth = 0.6, width = 0.6) +
   geom_text(
@@ -791,7 +791,7 @@ plot2 <- ggplot(plot_data_b, aes(x = hh_group, y = prop, fill = transit_group)) 
     legend.position = "none"
   )
 
-### merging plot1 & plot2 side by side
+### merging two plots side by side
 final_transit_dashboard <- plot1 + plot2 + 
   plot_layout(widths = c(1, 1)) + 
   plot_annotation(
@@ -848,7 +848,7 @@ plot_data_g2_performance <- mean_commute_rent_group2 %>%
                       labels = c("Family", "Mixed"))
   )
 
-### plot
+### plotting
 p_performance_g2 <- ggplot(plot_data_g2_performance, aes(x = value, y = transit_group, fill = metric)) +
   geom_col(position = position_dodge(width = 0.8), width = 0.7, color = "white", linewidth = 0.3) +
   geom_text(
@@ -1022,7 +1022,7 @@ p_tradeoff_commute <- ggplot(combined_commute,
     panel.grid.major.x = element_blank()
   )
 
-### merging plot1 & plot2 side by side
+### merging two plots side by side
 p_combined_dashboard <- (p_tradeoff_burden | p_tradeoff_commute) + 
   plot_layout(guides = "collect") & 
   theme(
