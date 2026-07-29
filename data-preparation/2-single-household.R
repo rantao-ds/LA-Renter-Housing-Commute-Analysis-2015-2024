@@ -46,34 +46,24 @@ Part 2: income & rent burden
 # seting the minimum wage threadhold and filtering out below the minimum wage
 sh <- sh %>%
   mutate(min_wage_threshold = case_when(
-    # 2015
     MULTYEAR == 2015 & type_hrwrk == "part_time" ~ 9360,
     MULTYEAR == 2015 & type_hrwrk %in% c("full_time", "over_time") ~ 16380,
-    # 2016
     MULTYEAR == 2016 & type_hrwrk == "part_time" ~ 10400,
     MULTYEAR == 2016 & type_hrwrk %in% c("full_time", "over_time") ~ 18200,
-    # 2017
     MULTYEAR == 2017 & type_hrwrk == "part_time" ~ 10400,
     MULTYEAR == 2017 & type_hrwrk %in% c("full_time", "over_time") ~ 18200,
-    # 2018
     MULTYEAR == 2018 & type_hrwrk == "part_time" ~ 11440,
     MULTYEAR == 2018 & type_hrwrk %in% c("full_time", "over_time") ~ 20020,
-    # 2019
     MULTYEAR == 2019 & type_hrwrk == "part_time" ~ 12480,
     MULTYEAR == 2019 & type_hrwrk %in% c("full_time", "over_time") ~ 21840,
-    # 2020
     MULTYEAR == 2020 & type_hrwrk == "part_time" ~ 12480,
     MULTYEAR == 2020 & type_hrwrk %in% c("full_time", "over_time") ~ 21840,
-    # 2021
     MULTYEAR == 2021 & type_hrwrk == "part_time" ~ 13520,
     MULTYEAR == 2021 & type_hrwrk %in% c("full_time", "over_time") ~ 23660,
-    # 2022
     MULTYEAR == 2022 & type_hrwrk == "part_time" ~ 14560,
     MULTYEAR == 2022 & type_hrwrk %in% c("full_time", "over_time") ~ 25480,
-    # 2023
     MULTYEAR == 2023 & type_hrwrk == "part_time" ~ 16120,
     MULTYEAR == 2023 & type_hrwrk %in% c("full_time", "over_time") ~ 28210,
-    # 2024
     MULTYEAR == 2024 & type_hrwrk == "part_time" ~ 16640,
     MULTYEAR == 2024 & type_hrwrk %in% c("full_time", "over_time") ~ 29120
   )) %>%
