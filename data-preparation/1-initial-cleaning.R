@@ -1,7 +1,14 @@
 Part 1: Initial Cleaning 
-# loading the dataset
 
-# filtering the dataset for LA county
+# note: please download the dataset from IPUMS USA using the selected variables and ACS years (registration required), then update the file path accordingly.
+# dataset: https://usa.ipums.org/usa/
+
+library(tidyverse)
+
+# loading the datasets
+data <- read_csv("data/usa_0009.csv.gz")
+
+# filtering the dataset to Los Angeles county
 la_acs <- data %>%
 filter(COUNTYFIP == 37)
 
