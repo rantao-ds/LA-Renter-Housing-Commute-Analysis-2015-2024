@@ -158,7 +158,7 @@ Part 3 : relabeling characters
 sh <- sh %>%
   mutate(VEHICLES = case_when(
     VEHICLES == 9 ~ "no_available", 
-    TRUE ~ as.character(VEHICLES)   F
+    TRUE ~ as.character(VEHICLES)   
   ))
 
 # UNITSSTR
