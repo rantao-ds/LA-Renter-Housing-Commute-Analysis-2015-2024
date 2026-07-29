@@ -46,7 +46,7 @@ prop_outside <- prop_clean %>% filter(prop < 0.05)
 prop_outside <- prop_outside %>%
   mutate(label_hjust = 0.5)
 
-### plot
+### plotting
 p_independent_share <- ggplot(prop_clean, aes(x = 2, y = prop, fill = hh_group)) +
   geom_bar(stat = "identity", color = "white", linewidth = 1.5) +
   coord_polar(theta = "y", start = 0) +
@@ -376,7 +376,7 @@ plot2 <- ggplot(plot_data_income, aes(x = range_burden, y = prop, fill = income_
     legend.text = element_text(size = 9)
   )
 
-### merging plot1 & plot2 side by side
+### merging two plots side by side
 final_profile_dashboard <- plot1 + plot2 + 
   plot_layout(widths = c(1, 1)) + 
   plot_annotation(
@@ -434,7 +434,7 @@ income_colors <- c(
   "Upper-Income"  = "#598F6C"   
 )
 
-### plot
+### plotting
 transit_income_plot_contrast_green <- ggplot(plot_data_transit_inc, aes(x = transit_group, y = prop, fill = income_tier_g1)) +
   geom_col(color = "white", linewidth = 0.6, width = 0.6) +
     geom_text(
@@ -601,7 +601,7 @@ plot2 <- ggplot(plot_data_b, aes(x = hh_group, y = prop, fill = transit_group)) 
     legend.position = "none" 
   )
 
-### merging both plot1 & plot2 side by side
+### merging two plots side by side
 final_transit_dashboard <- plot1 + plot2 + 
   plot_layout(widths = c(1, 1)) + 
   plot_annotation(
@@ -658,7 +658,7 @@ income_colors <- c(
   "Upper-Income"  = "#598F6C"   
 )
  
-### plot 
+### plotting
 transit_income_plot_contrast_green <- ggplot(plot_data_transit_inc, aes(x = transit_group, y = prop, fill = income_tier_g1)) +
   geom_col(color = "white", linewidth = 0.6, width = 0.6) +
   geom_text(
@@ -832,7 +832,7 @@ plot2 <- ggplot(plot_data_transit, aes(x = value, y = transit_group, fill = metr
     panel.grid.major.x = element_line(color = "gray90")
   )
 
-### meriging plot1 & plot2 side by side
+### meriging two plots side by side
 final_performance_dashboard <- (plot1 + plot2) + 
   plot_layout(widths = c(1, 1.2), guides = "collect") & 
   theme(
