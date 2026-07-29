@@ -27,6 +27,20 @@ saveRDS(group_two_eda, "data/group_two_eda_ready.rds")
 Part 2: group two eda
 
 # chart 1 (Distribution of Family-Based Households)
+## calculating weighted mean rent burden by ACS 5-year sample and household type (summary only)
+group_two_eda %>%
+  group_by(year) %>%
+  summarise(
+    mean_rent_burden = weighted.mean(rent_burden, perwt, na.rm = TRUE)
+  )
+
+group_two_eda %>%
+  group_by(year, hh_group) %>%
+  summarise(
+    mean_rent_burden = weighted.mean(rent_burden, perwt, na.rm = TRUE),
+    .groups = "drop"
+  )
+
 ## calculating 
 pct_fm_mx <- group_two_eda %>%
  count(hh_group, wt = perwt) %>%           
