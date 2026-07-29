@@ -144,11 +144,13 @@ ggsave("plots/overall_prop_type_household.png",
 
 
 # chart 2 (Overall Housing Affordability & Living Arrangement Distribution)
-## calculating weighted mean rent burden by ACS sample (summary only)
+## calculating weighted mean rent burden by ACS 5-year sample (summary only)
 full_final %>%
-          group_by(year) %>%
-           summarise(mean_rent_burden = weighted.mean(rent_burden, perwt, na.rm = TRUE)
-                   )
+  group_by(year) %>%
+  summarise(
+    mean_rent_burden = weighted.mean(rent_burden, perwt, na.rm = TRUE)
+  )
+
 ## calculating
 overall_rent_burden <- full_final %>%
      group_by(range_burden) %>%
