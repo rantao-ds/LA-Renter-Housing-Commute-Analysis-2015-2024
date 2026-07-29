@@ -88,7 +88,7 @@ prop_full_household <- full_final %>%
  count(hh_group, wt = perwt) %>%           
      mutate(prop = n / sum(n))
 
-### plot
+### plotting
 library(ggplot2)
 library(scales)
 
@@ -159,7 +159,7 @@ rent_burden_household <- full_final %>%
      count(range_burden, wt = perwt) %>%           
      mutate(prop = n / sum(n))
 
-### plot
+### plotting
 library(dplyr)
 library(ggplot2)
 library(scales)
@@ -371,7 +371,7 @@ prop_trans_household <- full_final %>%
      count(transit_group, wt = perwt) %>%           
      mutate(prop = n / sum(n))
 
-### plot
+### plotting
 
 library(dplyr)
 library(tidyr)
@@ -537,7 +537,7 @@ mean_commute_rent_trans <- full_final %>%
     .groups = "drop"
   )
 
-### plot
+### plotting
 #### define the color 
 metric_colors <- c(
    "Mean Commute Time (mins)" = "#23cbc3", 
