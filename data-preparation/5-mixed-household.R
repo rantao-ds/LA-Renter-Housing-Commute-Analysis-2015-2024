@@ -38,7 +38,6 @@ mh_mx <- mh_mx %>%
   filter(FTOTINC_clean > 0) %>%
   group_by(MULTYEAR) %>%
   filter(
-    # Always include na.rm = TRUE to prevent NA errors from wiping out entire years
     FTOTINC_clean >= quantile(FTOTINC_clean, 0.015, na.rm = TRUE) &
     FTOTINC_clean <= quantile(FTOTINC_clean, 0.985, na.rm = TRUE)
   ) %>%
@@ -135,10 +134,8 @@ mh_mx <- mh_mx %>%
   mutate(family_size = has_head + has_relatives) %>%
   mutate(
     rent_burden = case_when(
-      # For Roommates: using individual INCTOT and 1/n_hh of the rent
       RELATED %in% c(1115, 1260) ~ 
         round(((RENT * 12) / n_hh) / INCTOT * 100, 2),
-      # For Family: using pooled FTOTINC_clean and the family's share of the rent
       TRUE ~ 
         round(((RENT * 12) * (family_size / n_hh)) / FTOTINC_clean * 100, 2)
     )
@@ -197,21 +194,17 @@ mh_mx %>%
 mh_mx <- mh_mx %>%
   group_by(YEAR) %>%
   mutate(
-    # calculating roommate percentiles 
     p30_rm = quantile(INCTOT[RELATED %in% c(1115, 1260)], 0.30, na.rm = TRUE),
-    p80_rm = quantile(INCTOT[RELATED %in% c(1115, 1260)], 0.80, na.rm = TRUE),
-    # calculating family percentiles 
+    p80_rm = quantile(INCTOT[RELATED %in% c(1115, 1260)], 0.80, na.rm = TRUE), 
     p30_fam = quantile(FTOTINC_clean[!RELATED %in% c(1115, 1260)], 0.30, na.rm = TRUE),
     p80_fam = quantile(FTOTINC_clean[!RELATED %in% c(1115, 1260)], 0.80, na.rm = TRUE)
   ) %>%
   ungroup() %>%
   mutate(
     income_tier = case_when(
-      # assigning roommate income tier
       RELATED %in% c(1115, 1260) & INCTOT <= p30_rm ~ "low_income",
       RELATED %in% c(1115, 1260) & INCTOT <= p80_rm ~ "middle_income",
       RELATED %in% c(1115, 1260)                     ~ "upper_income",
-      # assigning family income tier
       FTOTINC_clean <= p30_fam ~ "low_income",
       FTOTINC_clean <= p80_fam ~ "middle_income",
       TRUE                     ~ "upper_income"
@@ -467,13 +460,8 @@ mh_mx <- mh_mx %>%
 mh_mx <- mh_mx %>%
   mutate(
     worker_type = case_when(
-      # 1. Family with 1 worker (Use == 1)
       lv_status == "FM" & family_workers == 1 ~ "single_earner",
-      
-      # 2. Family with multiple workers
       lv_status == "FM" & family_workers > 1  ~ "multiple_earners",
-      
-      # 3. Roommates (Keeps them labeled instead of turning into NA!)
       lv_status == "RM"                       ~ "roommate"
     )
   )
