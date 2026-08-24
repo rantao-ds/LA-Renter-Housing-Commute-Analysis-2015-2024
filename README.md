@@ -2,23 +2,21 @@
 An analysis of how stable working renters in Los Angeles County experience the housing–commute trade-off through affordability, commuting patterns, household structure, and work-from-home trends using the 2019 and 2024 ACS 5-year estimates with R.
 
 ## Why This Project
-As a renter living in Los Angeles, the trade-off between housing affordability and commute time is a real and often difficult decision, given high housing costs and heavy rush-hour traffic. As an international student in LA, I experienced this trade-off directly: living closer to school meant shorter commute times but higher rent, even when sharing housing, while living farther away provided more affordable options but could require commutes of up to two hours. Early in my time in LA, I prioritized a shorter commute and accepted shared housing. Later, as my schedule became more flexible and I only needed to attend school two to three times per week, my priorities shifted toward privacy and affordability over proximity.
+As a renter living in Los Angeles, the trade-off between housing affordability and commute time is a real and often difficult decision, given high housing costs and heavy rush-hour traffic. During my time as an international student in LA, I experienced this trade-off directly: living closer to school meant shorter commute times but higher rent, even when sharing housing, while living farther away provided more affordable options but could require commutes of up to two hours. Early in my time in LA, I prioritized a shorter commute and accepted shared housing. Later, as my schedule became more flexible and I only needed to attend school two to three times per week, my priorities shifted toward privacy and affordability over proximity.
 
-For workers with less flexible schedules, this trade-off can be even more challenging, particularly those working full-time or commuting multiple days per week. Therefore, this project examines how Los Angeles renters across different household types navigate the relationship between housing affordability and commute time using 2019 and 2024 5-year ACS estimates. As a secondary analysis, this project also explores whether the rise of remote work following COVID-19 has changed this relationship.
+For workers with less flexible schedules, this trade-off can be even more challenging, particularly for working full-time or commuting multiple days per week. Therefore, this project examines how Los Angeles renters across different household types navigate the relationship between housing affordability and commute time using the 2019 and 2024 5-year ACS estimates. As a secondary analysis, this project also explores whether the rise of remote work following COVID-19 has changed this relationship.
 
 ## Data
 
 The data were retrieved from IPUMS USA using the ACS 5-Year datasets for **2015–2019** and **2020–2024**, restricted to **Los Angeles County, California**. 
 
 **Data Source Citation:**
-Steven Ruggles, Sarah Flood, Matthew Sobek, Daniel Backman, Grace Cooper, Julia A. Rivera Drew,
-Stephanie Richards, Renae Rodgers, Jonathan Schroeder, and Kari C.W. Williams. IPUMS USA: Version 16.0
-[dataset]. Minneapolis, MN: IPUMS, 2025. https://doi.org/10.18128/D010.V16.0
+> Steven Ruggles, Sarah Flood, Matthew Sobek, Daniel Backman, Grace Cooper, Julia A. Rivera Drew, Stephanie Richards, Renae Rodgers, Jonathan Schroeder, and Kari C.W. Williams. IPUMS USA: Version 16.0 [dataset]. Minneapolis, MN: IPUMS, 2025. https://doi.org/10.18128/D010.V16.0
 
-Raw ACS/IPUMS data files are not included in this repository and can be obtained by registering through IPUMS USA and downloading the corresponding ACS 5-year samples. For detailed information on variable selection and additional variables, please refer to the [Variable Selection Details](variable-selection-details.md) page.
+Raw ACS/IPUMS data files are not included in this repository and can be obtained by registering through IPUMS USA and downloading the corresponding ACS 5-year samples. For detailed information on variable selection and definitions, please refer to the [Variable Selection Details](variable-selection-details.md) page.
 
 
-### Renter Household & Unit Structure Criteria:
+### Renter Household & Unit Structure Criteria
 
 * The household tenure must be renter-occupied with cash rent.
 * The housing structure must be a residential unit: a 1-family house (detached or attached) or a multi-family building with 2 or more units.
@@ -54,21 +52,21 @@ A multi-person household in which the head is a stable worker, living with both 
 
 To facilitate exploratory data analysis (EDA) and modeling, the four original household types were combined into three distinct analytical groups.
 
-  > **Note:** Mixed renter households contribute observations to both analytical groups depending on the individual's household role: family members are included in Group Two, while stable working roommates are included in Group One.
+  > **Note:** Mixed renter households contribute observations to the analytical groups depending on the individual's household role: family members are included in Group Two, while stable working roommates are included in Group One.
 
 
-**Group_One**
+**Group One**
 
 Group One represents an individual-level analytical framework focusing on nonfamily living arrangements. This group combines individuals from single renter households, roommate renter households, and roommates living in mixed renter households. Following the data wrangling and merging process, Group One retains a sample of 32,604 observations for descriptive and predictive analysis.
 
 
-**Group_Two**
+**Group Two**
 
 Group Two represents a household-level analytical framework focusing on family living arrangements. This group combines individuals from family renter households and families living in mixed renter households. Following the data wrangling and merging process, Group Two retains a sample of 87,901 observations for descriptive and predictive analysis.
 
 
 
-**Group_Three**
+**Group Three**
 
 Group Three is an additional group focusing exclusively on work-from-home (WFH) individuals across all households. Following the data wrangling and merging process, Group Three retains a sample of 13,979 observations for descriptive analysis.
 
