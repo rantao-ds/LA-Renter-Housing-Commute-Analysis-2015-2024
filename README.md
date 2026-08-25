@@ -1,10 +1,31 @@
-# Rethinking the Housing–Commute Trade-Off: LA Renter Analysis (ACS 2019–2024)
+# Rethinking the Housing–Commute Trade-Off: LA Renter Analysis (2015–2024)
 An analysis of how stable working renters in Los Angeles County experience the housing–commute trade-off through affordability, commuting patterns, household structure, and work-from-home trends using the 2019 and 2024 ACS 5-year estimates with R.
 
-## Why This Project
+### Why This Project
 As a renter living in Los Angeles, the trade-off between housing affordability and commute time is a real and often difficult decision, given high housing costs and heavy rush-hour traffic. During my time as an international student in LA, I experienced this trade-off directly: living closer to school meant shorter commute times but higher rent, even when sharing housing, while living farther away provided more affordable options but could require commutes of up to two hours. Early in my time in LA, I prioritized a shorter commute and accepted shared housing. Later, as my schedule became more flexible and I only needed to attend school two to three times per week, my priorities shifted toward privacy and affordability over proximity.
 
 For workers with less flexible schedules, this trade-off can be even more challenging, particularly for working full-time or commuting multiple days per week. Therefore, this project examines how Los Angeles renters across different household types navigate the relationship between housing affordability and commute time using the 2019 and 2024 5-year ACS estimates. As a secondary analysis, this project also explores whether the rise of remote work following COVID-19 has changed this relationship.
+
+### Technical Highlights
+
+* Wrangled 989,530 Census PUMS microdata records (IPUMS ACS 2019 & 2024 5-year estimates) for Los Angeles County into an analytical dataset of 120,505 stable working renters.
+* Engineered four household classifications based on living arrangements (Single, Roommate-only, Family-only, and Mixed) with custom rent-burden formulas tailored to each household structure.
+* Established two analytical frameworks for EDA and modeling: Group One (individual-level nonfamily renters) and Group Two (household-level family renters).
+* Applied unsupervised K-Means clustering to identify the main socioeconomic characteristics and trade-off patterns across both analytical frameworks.
+* Applied supervised Logistic Regression using the "30/30 Dual-Burden" classification target to identify key socioeconomic predictors of dual-burden risk, evaluating performance using both unweighted and survey-weighted AUC.
+
+
+### Key Findings
+
+* **Shift in the Classic Trade-Off:** Across both analytical frameworks, commute times remain structurally consistent around 30 minutes regardless of income. The trade-off is not about exchanging longer commutes for cheaper housing, but rather how income and household resources dictate how much rent burden renters must absorb within that fixed 30-minute radius.
+
+* **The "Privacy Tax":** Renters who prioritize privacy over shared living pay a heavy financial penalty. Single-person households face the highest financial strain, averaging a 33.3% rent burden, while sharing space with roommates or family members provides a major financial buffer that significantly lowers housing costs.
+
+* **Who Faces the Greatest Burden:** The renters most vulnerable to experiencing both high rent burden and long commutes are low-income workers, public transit riders, and single-earner families with dependent children. In contrast, having multiple working adults in the household provides the strongest protection against this financial and commuting strain.
+
+
+--- 
+
 
 ## Data
 
