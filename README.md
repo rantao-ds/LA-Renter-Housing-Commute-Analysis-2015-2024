@@ -9,19 +9,23 @@ For workers with less flexible schedules, this trade-off can be even more challe
 ### Technical Highlights
 
 * Wrangled 989,530 Census PUMS microdata records (IPUMS ACS 2019 & 2024 5-year estimates) for Los Angeles County into an analytical dataset of 120,505 stable working renters.
+  
 * Engineered four household classifications based on living arrangements (Single, Roommate-only, Family-only, and Mixed) with custom rent-burden formulas tailored to each household structure.
+  
 * Established two analytical frameworks for EDA and modeling: Group One (individual-level nonfamily renters) and Group Two (household-level family renters).
+
 * Applied unsupervised K-Means clustering to identify the main socioeconomic characteristics and trade-off patterns across both analytical frameworks.
+  
 * Applied supervised Logistic Regression using the "30/30 Dual-Burden" classification target to identify key socioeconomic predictors of dual-burden risk, evaluating performance using both unweighted and survey-weighted AUC.
 
 
 ### Key Findings
 
-* **Shift in the Classic Trade-Off:** Across both analytical frameworks, commute times remain structurally consistent around 30 minutes regardless of income. The trade-off is not about exchanging longer commutes for cheaper housing, but rather how income and household resources dictate how much rent burden renters must absorb within that fixed 30-minute radius.
+* **Shift in the Classic Trade-Off:** Across both analytical frameworks, commute times remain structurally consistent around 30 minutes regardless of income. The trade-off is not about exchanging longer commutes for cheaper housing, but rather how living arrangements, the number of working earners, and dependent children determine how much rent burden renters take on within that fixed 30-minute radius.
 
-* **The "Privacy Tax":** Renters who prioritize privacy over shared living pay a heavy financial penalty. Single-person households face the highest financial strain, averaging a 33.3% rent burden, while sharing space with roommates or family members provides a major financial buffer that significantly lowers housing costs.
-
-* **Who Faces the Greatest Burden:** The renters most vulnerable to experiencing both high rent burden and long commutes are low-income workers, public transit riders, and single-earner families with dependent children. In contrast, having multiple working adults in the household provides the strongest protection against this financial and commuting strain.
+* **The "Privacy Tax" on Living Alone:** Single renters pay a clear premium to maintain their own space, dedicating a larger share of their income to housing than any other group. Barely half of single-person households (53.6%) fall into the affordable category (rent burden < 30%), and they are the only group whose average rent burden crosses the 30% threshold (at 33.3%). In contrast, all other living arrangements average safely below 30%, with the large majority of households maintaining affordable rent by sharing housing costs with roommates or family.
+  
+* **Who Faces the Greatest Burden:** Using the 30/30 measure (>30% rent burden and >30-minute commute), the renters most vulnerable to falling into this dual-burden category are low-income workers, public transit riders, and single-earner families with dependent children. In contrast, having multiple working adults in the household provides the strongest protection against this combined financial and commuting strain.
 
 
 --- 
