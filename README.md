@@ -8,8 +8,8 @@ For workers with less flexible schedules, this trade-off can be even more challe
 
 ### Technical Highlights
 
-* Wrangled 989,530 Census PUMS microdata records (IPUMS ACS 2019 & 2024 5-year estimates) for Los Angeles County into an analytical dataset of 120,505 stable working renters.
-  
+* Wrangled 989,530 Census PUMS microdata records (IPUMS ACS 2019 & 2024 5-year estimates) for Los Angeles County into an analytical sample of 120,505 stable working renters, applying personal survey weights (PERWT) for population-level analysis.
+    
 * Engineered four household classifications based on living arrangements (Single, Roommate-only, Family-only, and Mixed) with custom rent-burden formulas tailored to each household structure.
   
 * Established two analytical frameworks for EDA and modeling: Group One (individual-level nonfamily renters) and Group Two (household-level family renters).
