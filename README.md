@@ -27,8 +27,7 @@ For workers with less flexible schedules, this trade-off can be even more challe
   
 * **Who Faces the Greatest Burden:** Using the 30/30 measure (>30% rent burden and >30-minute commute), the renters most vulnerable to falling into this dual-burden category are low-income workers, public transit riders, and single-earner families with dependent children. In contrast, having multiple working adults in the household provides the strongest protection against this combined financial and commuting strain.
 
-
---- 
+ 
 
 
 ## Data
